@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Live Tracking | Express Delivery</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html"><div class="logo"></div><span>Express Delivery <small>Since 2007 • Worldwide</small></span></a>
+    <div class="nav-cta">
+      <a class="btn ghost" href="track.html">Back</a>
+      <a class="btn primary" href="ship.html">Ship Now</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="pagehead">
+    <div class="container">
+      <h1>Live Shipment Tracking</h1>
+      <p>Map view, shipment info, and locations passed through (hardcoded for now).</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container tracking-layout">
+
+      <div class="mapWrap">
+        <div id="map"></div>
+      </div>
+
+      <div class="side">
+        <div class="infoCard">
+          <h3>Shipment Summary</h3>
+          <div class="kv" id="summaryKv"></div>
+        </div>
+
+        <div class="infoCard">
+          <h3>Route History</h3>
+          <div class="timeline" id="timeline"></div>
+          <div class="kicker" style="margin-top:10px;">
+            If client adds more budget, we can connect real-time GPS & database updates.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="assets/js/tracking.js"></script>
+</body>
+</html>

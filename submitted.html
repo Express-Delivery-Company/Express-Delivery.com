@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Submitted | Express Delivery</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html"><div class="logo"></div><span>Express Delivery <small>Since 2007 • Worldwide</small></span></a>
+    <div class="nav-cta">
+      <a class="btn ghost" href="index.html">Home</a>
+      <a class="btn primary" href="track.html">Track Shipment</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="container">
+      <div class="panel">
+        <div class="panel-pad">
+          <div class="pill">✅ Request Received</div>
+          <h1 class="h1" style="margin-top:12px;">We’ll contact you via email.</h1>
+          <p class="lead">Our team will review your shipment request and reach out shortly. This page will return to the Home page automatically.</p>
+
+          <div class="notice" style="margin-top:14px;">
+            Redirecting in <b id="count">20</b> seconds…
+          </div>
+
+          <div style="margin-top:16px;display:flex;gap:12px;flex-wrap:wrap;">
+            <a class="btn primary" href="index.html">Go Home Now</a>
+            <a class="btn ghost" href="ship.html">Submit Another</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  let t = 20;
+  const el = document.getElementById("count");
+  const timer = setInterval(() => {
+    t--;
+    el.textContent = t;
+    if (t <= 0) {
+      clearInterval(timer);
+      window.location.href = "index.html";
+    }
+  }, 1000);
+</script>
+</body>
+</html>

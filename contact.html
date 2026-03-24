@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact Us | Express Delivery</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html">
+      <div class="logo"></div>
+      <span>Express Delivery <small>Since 2007 • Worldwide</small></span>
+    </a>
+
+    <button class="menu-btn" type="button" aria-label="Open menu" data-menu-btn>
+      ☰
+    </button>
+
+    <nav class="nav-links" data-nav>
+      <a href="index.html">Home</a>
+      <a href="ship.html">Ship With Us</a>
+      <a href="track.html">Track Shipment</a>
+      <a href="about.html">About</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html" class="active">Contact</a>
+
+      <div class="nav-mobile-cta">
+        <a class="btn ghost" href="track.html">Track</a>
+        <a class="btn primary" href="ship.html">Ship Now</a>
+      </div>
+    </nav>
+
+    <div class="nav-cta nav-cta-desktop">
+      <a class="btn ghost" href="track.html">Track</a>
+      <a class="btn primary" href="ship.html">Ship Now</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="pagehead">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>Send a message and we’ll reply as soon as possible.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split">
+      <div class="panel imgbox" style="background-image:url('assets/img/customer\ care.jpg')"></div>
+
+      <div class="panel">
+        <div class="panel-pad">
+          <form class="form" onsubmit="event.preventDefault(); alert('Message received (static demo).');">
+            <div class="row2">
+              <div>
+                <div class="label">Full Name</div>
+                <input class="field" required placeholder="Your name" />
+              </div>
+              <div>
+                <div class="label">Email</div>
+                <input class="field" required type="email" placeholder="you@email.com" />
+              </div>
+            </div>
+            <div>
+              <div class="label">Message</div>
+              <textarea class="field" required rows="6" placeholder="Write your message..."></textarea>
+            </div>
+            <button class="btn primary" type="submit">Send Message</button>
+
+            <div class="notice" style="margin-top:12px;">
+              📩 Support Email: <b>support@expressdelivery.com</b>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="brand"><div class="logo"></div><span>Express Delivery <small>Since 2007</small></span></div>
+      <p>Worldwide shipping and a premium tracking experience.</p>
+    </div>
+    <div>
+      <div class="badge">📩 Support: support@expressdelivery.com</div>
+      <div class="kicker" style="margin-top:10px;">© <span id="year"></span> Express Delivery. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/nav.js"></script>
+</body>
+</html>

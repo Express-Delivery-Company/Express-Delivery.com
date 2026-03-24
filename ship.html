@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ship With Us | Express Delivery</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html">
+      <div class="logo"></div>
+      <span>Express Delivery <small>Since 2007 • Worldwide</small></span>
+    </a>
+
+    <button class="menu-btn" type="button" aria-label="Open menu" data-menu-btn>
+      ☰
+    </button>
+
+    <nav class="nav-links" data-nav>
+      <a href="index.html">Home</a>
+      <a href="ship.html"  class="active">Ship With Us</a>
+      <a href="track.html">Track Shipment</a>
+      <a href="about.html">About</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+
+      <div class="nav-mobile-cta">
+        <a class="btn ghost" href="track.html">Track</a>
+        <a class="btn primary" href="ship.html">Ship Now</a>
+      </div>
+    </nav>
+
+    <div class="nav-cta nav-cta-desktop">
+      <a class="btn ghost" href="track.html">Track</a>
+      <a class="btn primary" href="ship.html">Ship Now</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="pagehead">
+    <div class="container">
+      <h1>Ship With Us</h1>
+      <p>Fill the form below we’ll contact you via email with next steps.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split">
+      <div class="panel imgbox" style="background-image:url('assets/img/ship-55.jpg')"></div>
+
+      <div class="panel">
+        <div class="panel-pad">
+
+          <form class="form" id="shipForm">
+            <div class="row2">
+              <div>
+                <div class="label">Full Name</div>
+                <input class="field" required name="name" placeholder="Your name" />
+              </div>
+              <div>
+                <div class="label">Email</div>
+                <input class="field" required name="email" type="email" placeholder="you@email.com" />
+              </div>
+            </div>
+
+            <div class="row2">
+              <div>
+                <div class="label">Pickup Country</div>
+                <input class="field" required name="pickup" placeholder="e.g. Sweden" />
+              </div>
+              <div>
+                <div class="label">Destination Country</div>
+                <input class="field" required name="destination" placeholder="e.g. United States" />
+              </div>
+            </div>
+
+            <div>
+              <div class="label">Goods Description</div>
+              <textarea class="field" required name="description" rows="5" placeholder="Describe the goods (type, quantity, weight estimate, fragile?, etc.)"></textarea>
+            </div>
+
+            <div>
+              <div class="label">Upload Picture (optional)</div>
+              <input class="field" name="photo" type="file" accept="image/*" />
+            </div>
+
+            <button class="btn primary" type="submit">Submit Shipment Request</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="brand"><div class="logo"></div><span>Express Delivery <small>Since 2007</small></span></div>
+      <p>Worldwide shipping and a premium tracking experience.</p>
+    </div>
+    <div>
+      <div class="badge">📩 Support: support@expressdelivery.com</div>
+      <div class="kicker" style="margin-top:10px;">© <span id="year"></span> Express Delivery. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/ship.js"></script>
+<script src="assets/js/nav.js"></script>
+</body>
+</html>

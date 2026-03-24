@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Track Shipment | Express Delivery</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <div class="container nav-inner">
+        <a class="brand" href="index.html">
+          <div class="logo"></div>
+          <span>Express Delivery <small>Since 2007 • Worldwide</small></span>
+        </a>
+
+        <button
+          class="menu-btn"
+          type="button"
+          aria-label="Open menu"
+          data-menu-btn
+        >
+          ☰
+        </button>
+
+        <nav class="nav-links" data-nav>
+          <a href="index.html">Home</a>
+          <a href="ship.html">Ship With Us</a>
+          <a href="track.html" class="active">Track Shipment</a>
+          <a href="about.html">About</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">Contact</a>
+
+          <div class="nav-mobile-cta">
+            <a class="btn ghost" href="track.html">Track</a>
+            <a class="btn primary" href="ship.html">Ship Now</a>
+          </div>
+        </nav>
+
+        <div class="nav-cta nav-cta-desktop">
+          <a class="btn ghost" href="track.html">Track</a>
+          <a class="btn primary" href="ship.html">Ship Now</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="pagehead">
+        <div class="container">
+          <h1>Track Shipment</h1>
+          <p>
+            Enter your Order ID and Email to view the live tracking experience.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container split">
+          <div
+            class="panel imgbox"
+            style="background-image: url(&quot;assets/img/track1.jpg&quot;)"
+          ></div>
+
+          <div class="panel">
+            <div class="panel-pad">
+              <h2 style="margin: 0 0 8px">Track your shipment instantly</h2>
+              <p class="sub">
+                Fast verification, premium tracking visuals, and route history.
+              </p>
+
+              <form class="form" id="trackForm">
+                <div>
+                  <div class="label">Order ID</div>
+                  <input
+                    class="field"
+                    required
+                    name="orderId"
+                    placeholder="e.g. EXD-2048-9921"
+                  />
+                </div>
+                <div>
+                  <div class="label">Email</div>
+                  <input
+                    class="field"
+                    required
+                    type="email"
+                    name="email"
+                    placeholder="you@email.com"
+                  />
+                </div>
+
+                <button class="btn primary" type="submit">Track Now</button>
+                <div
+                  id="trackMessage"
+                  class="kicker"
+                  style="margin-top: 10px"
+                ></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="brand">
+            <div class="logo"></div>
+            <span>Express Delivery <small>Since 2007</small></span>
+          </div>
+          <p>Worldwide shipping and a premium tracking experience.</p>
+        </div>
+        <div>
+          <div class="badge">📩 Support: support@expressdelivery.com</div>
+          <div class="kicker" style="margin-top: 10px">
+            © <span id="year"></span> Express Delivery. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/track.js"></script>
+    <script src="assets/js/nav.js"></script>
+  </body>
+</html>
