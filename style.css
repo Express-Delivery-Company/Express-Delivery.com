@@ -339,3 +339,78 @@ button,input,textarea{font:inherit}
 .step.upcoming small {
   color: #666;
 }
+
+
+
+/* ===== Tracking Alert / Marquee Error ===== */
+.track-alert-wrap{
+  padding: 0 0 8px;
+}
+
+.track-alert{
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  background: linear-gradient(90deg, #fff1f1 0%, #ffdede 100%);
+  border: 1px solid rgba(255, 0, 0, 0.18);
+  box-shadow: 0 10px 25px rgba(255, 0, 0, 0.08);
+  height: 46px;
+  display: flex;
+  align-items: center;
+}
+
+.track-alert-text{
+  white-space: nowrap;
+  color: #c40000;
+  font-weight: 800;
+  padding-left: 100%;
+  animation: marqueeMove 14s linear infinite;
+}
+
+@keyframes marqueeMove{
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+}
+
+/* Current location should be red */
+.step.current .bullet {
+  background: red;
+  box-shadow: 0 0 0 6px rgba(255, 0, 0, 0.15);
+}
+
+.step.current b,
+.step.current small {
+  color: red;
+}
+
+/* Optional stronger warning style */
+.step.warning .bullet{
+  background: red;
+  box-shadow: 0 0 0 6px rgba(255, 0, 0, 0.12);
+}
+
+.step.warning b,
+.step.warning small {
+  color: red;
+}
+
+/* Red blinking marker */
+.blinkDot{
+  width:14px;
+  height:14px;
+  border-radius:50%;
+  background:red;
+  box-shadow:0 0 0 0 rgba(255,0,0,.55);
+  animation:pulseRed 1.4s infinite;
+  border:2px solid white;
+}
+
+@keyframes pulseRed{
+  0%{box-shadow:0 0 0 0 rgba(255,0,0,.55)}
+  70%{box-shadow:0 0 0 14px rgba(255,0,0,0)}
+  100%{box-shadow:0 0 0 0 rgba(255,0,0,0)}
+}
