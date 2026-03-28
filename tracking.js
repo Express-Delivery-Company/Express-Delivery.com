@@ -17,7 +17,7 @@ const route = [
 ]; 
 
 // CHANGE THIS ANYTIME TO SET CURRENT LOCATION
-const currentIndex = 3;
+const currentIndex = 1;
 
 const summaryKv = document.getElementById("summaryKv");
 const timeline = document.getElementById("timeline");
