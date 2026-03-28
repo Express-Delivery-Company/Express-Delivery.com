@@ -17,7 +17,7 @@ const route = [
 ]; 
 
 // CHANGE THIS ANYTIME TO SET CURRENT LOCATION
-const currentIndex = 1;
+const currentIndex = 3;
 
 const summaryKv = document.getElementById("summaryKv");
 const timeline = document.getElementById("timeline");
@@ -50,7 +50,10 @@ timeline.innerHTML = route.map((r, index) => {
     statusClass = "warning";
   } else if (index === currentIndex) {
     statusClass = "current";
-  }
+  }else if (index === currentIndex) {
+  fillColor = "red";
+  popupStatus = "Current location";
+}
 
   return `
     <div class="step ${statusClass}">
