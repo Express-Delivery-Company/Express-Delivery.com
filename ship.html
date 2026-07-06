@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ship With Us | Express Delivery</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html"><img class="brand-logo" src="assets/express-delivery-logo.png" alt="Express Delivery logo" /></a>
+      <button class="menu-btn" type="button" aria-label="Open menu" data-menu-btn>&#9776;</button>
+      <nav class="nav-links" data-nav>
+        <a href="index.html">Home</a>
+        <a href="ship.html" class="active">Ship With Us</a>
+        <a href="track.html">Track Shipment</a>
+        <a href="about.html">About</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+        <div class="nav-mobile-cta"><a class="btn ghost" href="track.html">Track</a><a class="btn primary" href="ship.html">Ship Now</a></div>
+      </nav>
+      <div class="nav-cta nav-cta-desktop"><a class="btn ghost" href="track.html">Track</a><a class="btn primary" href="ship.html">Ship Now</a></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="pagehead">
+      <div class="container">
+        <h1>Ship With Us</h1>
+        <p>Fill the form below and we will contact you via email with next steps.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div class="imgbox" style="background-image:url('ship-55.jpg')"></div>
+        <div class="panel">
+          <div class="panel-pad">
+            <h2>Shipment request</h2>
+            <p class="sub">Give us the important details so the team can review your route and handling needs.</p>
+            <ul class="mini-list">
+              <li>Include fragile, temperature-sensitive, or high-value handling notes.</li>
+              <li>Use the same email address you want linked to future tracking updates.</li>
+              <li>Add clear size, condition, and packaging details in the goods description.</li>
+            </ul>
+
+            <div class="visual-upload" data-visual-upload style="margin-top:22px">
+              <label class="label" for="packagePhotoPreview">Package Photo (optional)</label>
+              <label class="visual-upload-box" for="packagePhotoPreview">
+                <span class="visual-upload-title">Upload a clear photo</span>
+                <span class="visual-upload-text" data-visual-upload-text>Select a clear package photo for reference.</span>
+              </label>
+              <input id="packagePhotoPreview" type="file" accept="image/*" data-visual-upload-input />
+            </div>
+
+            <form
+              class="form"
+              id="shipForm"
+              style="margin-top:22px"
+              action="https://formspree.io/f/mojobqoz"
+              method="POST"
+              enctype="multipart/form-data"
+              data-formspree-form
+              data-success="submitted.html?type=shipment"
+            >
+              <input type="hidden" name="_subject" value="New shipment request" />
+              <div class="row2">
+                <div>
+                  <label class="label" for="name">Full Name</label>
+                  <input class="field" id="name" required name="name" placeholder="Your name" />
+                </div>
+                <div>
+                  <label class="label" for="email">Email</label>
+                  <input class="field" id="email" required name="email" type="email" placeholder="you@email.com" />
+                </div>
+              </div>
+              <div class="row2">
+                <div>
+                  <label class="label" for="pickup">Pickup Country</label>
+                  <input class="field" id="pickup" required name="pickup" placeholder="e.g. Sweden" />
+                </div>
+                <div>
+                  <label class="label" for="destination">Destination Country</label>
+                  <input class="field" id="destination" required name="destination" placeholder="e.g. United States" />
+                </div>
+              </div>
+              <div>
+                <label class="label" for="description">Goods Description</label>
+                <textarea class="field" id="description" required name="description" rows="5" placeholder="Type, quantity, weight estimate, fragile notes, and other handling details"></textarea>
+              </div>
+              <button class="btn primary block" type="submit">Submit Shipment Request</button>
+              <div class="kicker" data-form-status aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>What happens after you submit</h2>
+            <p class="sub">The request flow is designed to feel clear and professional from the moment the customer sends shipment details.</p>
+          </div>
+        </div>
+        <div class="cards">
+          <article class="card"><div class="icon">01</div><h4>Review</h4><p>The submitted route, item description, and handling notes are reviewed for service fit and delivery needs.</p></article>
+          <article class="card"><div class="icon" style="background:var(--teal)">02</div><h4>Response</h4><p>Support follows up by email with next steps, route expectations, and any packaging requirements.</p></article>
+          <article class="card"><div class="icon" style="background:var(--gold)">03</div><h4>Tracking</h4><p>Once a shipment record is ready, customers can use their Order ID and email to open the tracking view.</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><div class="brand"><img class="brand-logo" src="assets/express-delivery-logo.png" alt="Express Delivery logo" /></div><p>Worldwide shipping and a clear tracking experience.</p></div>
+      <div><div class="badge">Customer support available</div><div class="kicker" style="margin-top:10px;">&copy; <span id="year"></span> Express Delivery. All rights reserved.</div></div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="formspree.js"></script>
+  <script src="nav.js"></script>
+</body>
+</html>
