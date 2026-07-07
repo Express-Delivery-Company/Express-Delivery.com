@@ -22,12 +22,12 @@ if (trackForm) {
     },
     "EXD-7812-3345": {
       page: "tracking3.html",
-      receiver: "Michael Stone",
-      sender: "Grace Wilson",
+      receiver: "Tony ",
+      sender: "Iva Trogrlic",
       status: "Out for Delivery",
-      eta: "Today",
-      weight: "1.5 kg",
-      service: "Same Day Express"
+      eta: "Tomorrow",
+      weight: "60.5 kg",
+      service: "ToDay Express"
     },
     "EXD-9901-7742": {
       page: "tracking4.html",
