@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Request Received | Express Delivery</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html"><img class="brand-logo" src="assets/express-delivery-logo.png" alt="Express Delivery logo" /></a>
+      <div class="nav-cta"><a class="btn ghost" href="index.html">Home</a><a class="btn primary" href="track.html">Track Shipment</a></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container" style="max-width:840px">
+        <div class="panel">
+          <div class="panel-pad">
+            <div class="eyebrow" id="submittedEyebrow" style="color:var(--blue-dark);background:#eef4ff;border-color:#c7d7fe">Request received</div>
+            <h1 class="h1" id="submittedTitle" style="color:var(--ink);font-size:clamp(38px,7vw,64px);margin-top:16px">We will reach out shortly.</h1>
+            <p class="sub" id="submittedMessage">Our team will review your request and respond as soon as possible.</p>
+            <div class="notice" style="margin-top:18px;">Redirecting in <b id="count">20</b> seconds.</div>
+            <div class="actions">
+              <a class="btn primary" href="index.html">Go Home Now</a>
+              <a class="btn ghost" id="submittedSecondary" href="contact.html">Send Another Message</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const type = params.get("type");
+    const copy = {
+      shipment: {
+        eyebrow: "Shipment request received",
+        title: "Your shipment request is processing.",
+        message: "Our team will review the route, package details, and handling notes. We will reach out with next steps based on the shipment request.",
+        secondaryText: "Submit Another",
+        secondaryHref: "ship.html"
+      },
+      contact: {
+        eyebrow: "Message received",
+        title: "Thank you for contacting us.",
+        message: "Your message has been received. We will review it and reach out based on the details you submitted.",
+        secondaryText: "Send Another Message",
+        secondaryHref: "contact.html"
+      }
+    };
+
+    const selected = copy[type] || copy.contact;
+    document.getElementById("submittedEyebrow").textContent = selected.eyebrow;
+    document.getElementById("submittedTitle").textContent = selected.title;
+    document.getElementById("submittedMessage").textContent = selected.message;
+    document.getElementById("submittedSecondary").textContent = selected.secondaryText;
+    document.getElementById("submittedSecondary").href = selected.secondaryHref;
+
+    let t = 20;
+    const el = document.getElementById("count");
+    const timer = setInterval(() => {
+      t -= 1;
+      el.textContent = t;
+      if (t <= 0) {
+        clearInterval(timer);
+        window.location.href = "index.html";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>

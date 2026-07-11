@@ -1,0 +1,338 @@
+const pageName = window.location.pathname.split("/").pop() || "tracking.html";
+const params = new URLSearchParams(window.location.search);
+const legacyPageCodes = {
+  "tracking.html": "EXD-2048-9921",
+  "tracking2.html": "EXD-4587-1204",
+  "tracking3.html": "EXD-7812-3345",
+  "tracking4.html": "EXD-9901-7742",
+  "tracking5.html": "EXD-6633-1188",
+  "tracking6.html": "EXD-4402-5567",
+  "tracking7.html": "EXD-8754-2219"
+};
+const requestedCode = (params.get("code") || legacyPageCodes[pageName] || "EXD-2048-9921").trim().toUpperCase();
+
+const routeSwedenMissouri = [
+  { place: "Stockholm, Sweden", time: "Day 1 - 08:45", lat: 59.3293, lng: 18.0686, note: "Cargo received and registered at origin facility" },
+  { place: "Gothenburg, Sweden", time: "Day 2 - 14:20", lat: 57.7089, lng: 11.9746, note: "Processed for international cargo transfer" },
+  { place: "Copenhagen, Denmark", time: "Day 4 - 10:35", lat: 55.6761, lng: 12.5683, note: "Departed Nordic regional hub" },
+  { place: "Hamburg, Germany", time: "Day 6 - 16:10", lat: 53.5511, lng: 9.9937, note: "Arrived at European cargo handling center" },
+  { place: "Rotterdam, Netherlands", time: "Day 8 - 12:05", lat: 51.9244, lng: 4.4777, note: "Package processed for transatlantic movement" },
+  { place: "London, United Kingdom", time: "Day 10 - 19:30", lat: 51.5072, lng: -0.1276, note: "Transferred to international cargo route" },
+  { place: "Reykjavik, Iceland", time: "Day 12 - 07:50", lat: 64.1466, lng: -21.9426, note: "Technical cargo stop completed" },
+  { place: "Halifax, Canada", time: "Day 15 - 13:25", lat: 44.6488, lng: -63.5752, note: "Arrived in North America for customs inspection" },
+  { place: "New York, USA", time: "Day 17 - 11:15", lat: 40.7128, lng: -74.0060, note: "Awaiting U.S. import gateway processing" },
+  { place: "Chicago, Illinois, USA", time: "Day 19 - 15:40", lat: 41.8781, lng: -87.6298, note: "Scheduled for Midwest regional distribution" },
+  { place: "Kansas City, Missouri, USA", time: "Day 21 - 09:30", lat: 39.0997, lng: -94.5786, note: "Destination region facility" },
+  { place: "St. Joseph, Missouri, USA", time: "Day 21 - 16:10", lat: 39.7675, lng: -94.8467, note: "Final delivery region in Missouri" }
+];
+
+const routeCroatiaAustria = [
+  { place: "Zagreb, Croatia", time: "Day 1 - 09:15", lat: 45.8150, lng: 15.9819, note: "Shipment received and registered at origin facility" },
+  { place: "Vienna, Austria", time: "Day 3 - 13:40", lat: 48.2082, lng: 16.3738, note: "Departed regional sorting center" },
+  { place: "Munich, Germany", time: "Day 5 - 11:20", lat: 48.1351, lng: 11.5820, note: "Arrived at European cargo processing hub" },
+  { place: "Frankfurt, Germany", time: "Day 7 - 18:30", lat: 50.1109, lng: 8.6821, note: "Awaiting international cargo departure" },
+  { place: "Amsterdam, Netherlands", time: "Day 9 - 09:05", lat: 52.3676, lng: 4.9041, note: "Package processed at EU distribution facility" },
+  { place: "London, United Kingdom", time: "Day 11 - 16:50", lat: 51.5072, lng: -0.1276, note: "Transferred to transatlantic cargo route" },
+  { place: "Reykjavik, Iceland", time: "Day 13 - 07:40", lat: 64.1466, lng: -21.9426, note: "Technical cargo stop and inspection" },
+  { place: "Halifax, Canada", time: "Day 15 - 14:10", lat: 44.6488, lng: -63.5752, note: "Arrived in North America for customs inspection" },
+  { place: "New York, USA", time: "Day 19 - 11:45", lat: 40.7128, lng: -74.0060, note: "Arrived at U.S. import gateway and customs facility" },
+  { place: "Chicago, Illinois, USA", time: "Day 21 - 15:30", lat: 41.8781, lng: -87.6298, note: "Transferred to Midwest regional distribution hub" }
+];
+
+const routeUsDomestic = [
+  { place: "Los Angeles, California, USA", time: "08:00", lat: 34.0522, lng: -118.2437, note: "Package received by same-day dispatch" },
+  { place: "Riverside, California, USA", time: "10:15", lat: 33.9806, lng: -117.3755, note: "Sorted for local courier transfer" },
+  { place: "Phoenix, Arizona, USA", time: "13:40", lat: 33.4484, lng: -112.0740, note: "Loaded for final delivery route" },
+  { place: "Scottsdale, Arizona, USA", time: "16:20", lat: 33.4942, lng: -111.9261, note: "Courier approaching delivery area" }
+];
+
+const shipments = {
+  "EXD-2048-9921": {
+    orderId: "EXD-2048-9921",
+    receiver: "Pamela F.Campbell",
+    sender: "Anthony Francis",
+    status: "In Transit",
+    eta: "14 - 21 Business Days",
+    weight: "26 kg",
+    service: "International Cargo",
+    currentStop: "Stockholm, Sweden",
+    // problemStop: "Halifax, Canada",
+    // alertMessage: "Attention: Shipment held by customs authorities in Halifax, Canada. Please check your email for more information and instructions.",
+    route: routeSwedenMissouri
+  },
+  "EXD-4587-1204": {
+    orderId: "EXD-4587-1204",
+    receiver: "Martin Gauthier",
+    sender: "Iva Trogrlic",
+    status: "In Transit",
+    eta: "24 Business Days",
+    weight: "23 kg",
+    service: "Express Ground",
+    currentStop: "Vienna, Austria",
+    route: routeCroatiaAustria
+  },
+  "EXD-7812-3345": {
+    orderId: "EXD-7812-3345",
+    receiver: "Michael Stone",
+    sender: "Grace Wilson",
+    status: "Out for Delivery",
+    eta: "Today",
+    weight: "1.5 kg",
+    service: "Same Day Express",
+    currentStop: "Phoenix, Arizona, USA",
+    route: routeUsDomestic
+  },
+  "EXD-9901-7742": {
+    orderId: "EXD-9901-7742",
+    receiver: "Emily Brown",
+    sender: "Daniel Scott",
+    status: "In Transit",
+    eta: "4 - 6 Business Days",
+    weight: "5.1 kg",
+    service: "International Air",
+    currentStop: "Amsterdam, Netherlands",
+    route: routeCroatiaAustria
+  },
+  "EXD-6633-1188": {
+    orderId: "EXD-6633-1188",
+    receiver: "Sophia White",
+    sender: "James Walker",
+    status: "Arrived at Hub",
+    eta: "1 - 2 Business Days",
+    weight: "3.7 kg",
+    service: "Priority Express",
+    currentStop: "Frankfurt, Germany",
+    route: routeCroatiaAustria
+  },
+  "EXD-4402-5567": {
+    orderId: "EXD-4402-5567",
+    receiver: "Olivia Green",
+    sender: "Chris Adams",
+    status: "Customs Clearance",
+    eta: "5 - 7 Business Days",
+    weight: "6.0 kg",
+    service: "International Cargo",
+    currentStop: "Halifax, Canada",
+    problemStop: "Halifax, Canada",
+    alertMessage: "Attention: Shipment is under customs clearance in Halifax, Canada. Additional instructions may be sent to the tracking email.",
+    route: routeCroatiaAustria
+  },
+  "EXD-8754-2219": {
+    orderId: "EXD-8754-2219",
+    receiver: "Ethan Hall",
+    sender: "Victoria Lee",
+    status: "Delivered",
+    eta: "Completed",
+    weight: "2.2 kg",
+    service: "Express Air",
+    currentStop: "Scottsdale, Arizona, USA",
+    route: routeUsDomestic
+  }
+};
+
+const summaryKv = document.getElementById("summaryKv");
+const timeline = document.getElementById("timeline");
+const currentStopEl = document.getElementById("currentStop");
+const alertWrap = document.getElementById("trackAlertWrap");
+const alertText = document.getElementById("trackAlertText");
+const safe = (value, fallback = "-") => (value && String(value).trim() ? value : fallback);
+const escapeHtml = (value) => String(value ?? "").replace(/[&<>"']/g, (char) => ({
+  "&": "&amp;",
+  "<": "&lt;",
+  ">": "&gt;",
+  "\"": "&quot;",
+  "'": "&#039;"
+}[char]));
+
+localStorage.removeItem("express_delivery_tracking_request");
+
+const shipment = shipments[requestedCode];
+if (!shipment) {
+  renderInvalidTracking(requestedCode);
+} else {
+  renderShipment(shipment);
+}
+
+function renderShipment(req) {
+  const route = req.route || [];
+  const currentIndex = findStopIndex(route, req.currentStop);
+  const currentStop = route[currentIndex] || route[0];
+  const problemIndex = req.problemStop ? findStopIndex(route, req.problemStop) : -1;
+  const email = sessionStorage.getItem(`express_delivery_email_${req.orderId}`) || "-";
+
+  renderAlert(req.alertMessage);
+  renderSummary(req, email);
+  renderCurrentStop(req, currentStop, problemIndex === currentIndex);
+  renderTimeline(route, currentIndex, problemIndex);
+  renderMap(route, currentStop, currentIndex, problemIndex);
+}
+
+function renderSummary(req, email) {
+  const summary = [
+    ["Order ID", safe(req.orderId)],
+    ["Email", safe(email)],
+    ["Status", safe(req.status, "In Transit")],
+    ["Service", safe(req.service, "Express Air")],
+    ["Sender", safe(req.sender, "Sender Name")],
+    ["Receiver", safe(req.receiver, "Receiver Name")],
+    ["Weight", safe(req.weight)],
+    ["ETA", safe(req.eta)]
+  ];
+
+  if (summaryKv) {
+    summaryKv.innerHTML = summary
+      .map(([key, value]) => `<div><b>${escapeHtml(key)}</b><span>${escapeHtml(value)}</span></div>`)
+      .join("");
+  }
+}
+
+function renderCurrentStop(req, currentStop, hasProblem) {
+  if (!currentStopEl || !currentStop) return;
+
+  currentStopEl.innerHTML = `
+    <h3>${escapeHtml(currentStop.place)}</h3>
+    <p>${escapeHtml(currentStop.note)}</p>
+    <div class="current-meta">
+      <span>${escapeHtml(currentStop.time)}</span>
+      <span>${escapeHtml(hasProblem ? "Action required" : safe(req.status, "In Transit"))}</span>
+    </div>
+  `;
+}
+
+function renderTimeline(route, currentIndex, problemIndex) {
+  if (!timeline) return;
+
+  timeline.innerHTML = route.map((stop, index) => {
+    const statusClass = getStopStatus(index, currentIndex, problemIndex);
+    const statusLabel = {
+      passed: "Left location",
+      current: "Current location",
+      problem: "Problem stop",
+      upcoming: "Upcoming"
+    }[statusClass];
+
+    return `
+      <div class="step ${statusClass}">
+        <div class="bullet"></div>
+        <div>
+          <b>${escapeHtml(stop.place)}</b>
+          <small>${escapeHtml(stop.time)} - ${escapeHtml(stop.note)}</small>
+          <small class="step-status">${escapeHtml(statusLabel)}</small>
+        </div>
+      </div>
+    `;
+  }).join("");
+}
+
+function renderMap(route, currentStop, currentIndex, problemIndex) {
+  if (!window.L || !currentStop || !document.getElementById("map")) return;
+
+  const map = L.map("map", { zoomControl: true }).setView([currentStop.lat, currentStop.lng], 4);
+
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 18,
+    attribution: "&copy; OpenStreetMap"
+  }).addTo(map);
+
+  const reachedLatLngs = route.slice(0, currentIndex + 1).map(stop => [stop.lat, stop.lng]);
+  const upcomingLatLngs = route.slice(currentIndex).map(stop => [stop.lat, stop.lng]);
+
+  if (reachedLatLngs.length > 1) {
+    L.polyline(reachedLatLngs, { color: "#12b76a", weight: 4 }).addTo(map);
+  }
+
+  if (upcomingLatLngs.length > 1) {
+    L.polyline(upcomingLatLngs, { color: "#98a2b3", weight: 4, dashArray: "8, 8" }).addTo(map);
+  }
+
+  route.forEach((stop, index) => {
+    const statusClass = getStopStatus(index, currentIndex, problemIndex);
+    const colorMap = {
+      passed: "#12b76a",
+      current: "#155eef",
+      problem: "#d92d20",
+      upcoming: "#98a2b3"
+    };
+    const labelMap = {
+      passed: "Left location",
+      current: "Current location",
+      problem: "Problem stop",
+      upcoming: "Yet to reach"
+    };
+
+    L.circleMarker([stop.lat, stop.lng], {
+      radius: statusClass === "current" || statusClass === "problem" ? 8 : 7,
+      color: "#ffffff",
+      weight: 2,
+      fillColor: colorMap[statusClass],
+      fillOpacity: 1
+    })
+      .addTo(map)
+      .bindPopup(`
+        <b>${escapeHtml(stop.place)}</b><br>
+        ${escapeHtml(stop.time)}<br>
+        ${escapeHtml(stop.note)}<br>
+        <b>Status:</b> ${escapeHtml(labelMap[statusClass])}
+      `);
+  });
+
+  const markerClass = problemIndex === currentIndex ? "blinkDot problem" : "blinkDot current";
+  const blinkIcon = L.divIcon({
+    className: "",
+    html: `<div class="${markerClass}"></div>`,
+    iconSize: [18, 18],
+    iconAnchor: [9, 9]
+  });
+
+  L.marker([currentStop.lat, currentStop.lng], { icon: blinkIcon })
+    .addTo(map)
+    .bindPopup(`<b>Current Location</b><br>${escapeHtml(currentStop.place)}`)
+    .openPopup();
+
+  map.fitBounds(L.latLngBounds(route.map(stop => [stop.lat, stop.lng])), { padding: [22, 22] });
+}
+
+function renderAlert(message) {
+  if (!alertWrap || !alertText) return;
+
+  if (message) {
+    alertText.textContent = message;
+    alertWrap.hidden = false;
+  } else {
+    alertWrap.hidden = true;
+  }
+}
+
+function renderInvalidTracking(code) {
+  renderAlert("");
+
+  if (summaryKv) {
+    summaryKv.innerHTML = `
+      <div><b>Order ID</b><span>${escapeHtml(code)}</span></div>
+      <div><b>Status</b><span>Not found</span></div>
+    `;
+  }
+
+  if (currentStopEl) {
+    currentStopEl.innerHTML = `
+      <h3>Tracking code not found</h3>
+      <p>Please return to the tracking page and check the Order ID.</p>
+    `;
+  }
+
+  if (timeline) {
+    timeline.innerHTML = "";
+  }
+}
+
+function findStopIndex(route, place) {
+  const index = route.findIndex(stop => stop.place.toLowerCase() === String(place || "").toLowerCase());
+  return index >= 0 ? index : 0;
+}
+
+function getStopStatus(index, currentIndex, problemIndex) {
+  if (index === problemIndex) return "problem";
+  if (index < currentIndex) return "passed";
+  if (index === currentIndex) return "current";
+  return "upcoming";
+}

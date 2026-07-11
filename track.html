@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Track Shipment | Express Delivery</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html"><img class="brand-logo" src="assets/express-delivery-logo.png" alt="Express Delivery logo" /></a>
+      <button class="menu-btn" type="button" aria-label="Open menu" data-menu-btn>&#9776;</button>
+      <nav class="nav-links" data-nav>
+        <a href="index.html">Home</a>
+        <a href="ship.html">Ship With Us</a>
+        <a href="track.html" class="active">Track Shipment</a>
+        <a href="about.html">About</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+        <div class="nav-mobile-cta"><a class="btn ghost" href="track.html">Track</a><a class="btn primary" href="ship.html">Ship Now</a></div>
+      </nav>
+      <div class="nav-cta nav-cta-desktop"><a class="btn ghost" href="track.html">Track</a><a class="btn primary" href="ship.html">Ship Now</a></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="pagehead">
+      <div class="container">
+        <h1>Track Shipment</h1>
+        <p>Enter your Order ID and email address to open the shipment tracking view.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div class="imgbox" style="background-image:url('track1.jpg')"></div>
+        <div class="panel">
+          <div class="panel-pad">
+            <h2>Find your package</h2>
+            <p class="sub">Enter the Order ID and email address connected to your shipment to open the tracking page.</p>
+            <form
+              class="form"
+              id="trackForm"
+              style="margin-top:22px"
+              novalidate
+            >
+              <div>
+                <label class="label" for="orderId">Order ID</label>
+                <input class="field" id="orderId" required name="orderId" placeholder="e.g. EXD-0000-0000" />
+              </div>
+              <div>
+                <label class="label" for="trackEmail">Email</label>
+                <input class="field" id="trackEmail" required type="email" name="email" placeholder="you@email.com" />
+              </div>
+              <button class="btn primary block" type="submit">Track Now</button>
+              <div id="trackMessage" class="kicker" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Designed for confident shipment checks</h2>
+            <p class="sub">The tracking flow gives customers the information they expect before asking them to contact support.</p>
+          </div>
+        </div>
+        <div class="service-band">
+          <div class="service-cell"><strong>Identity check</strong><span>Order ID and email are paired before tracking details are opened.</span></div>
+          <div class="service-cell"><strong>Route timeline</strong><span>Passed locations, current location, and upcoming stops are shown in one view.</span></div>
+          <div class="service-cell"><strong>Status summary</strong><span>ETA, service type, receiver, sender, and shipment weight are kept visible.</span></div>
+          <div class="service-cell"><strong>Support alert</strong><span>Important route notices can appear above the live route interface.</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><div class="brand"><img class="brand-logo" src="assets/express-delivery-logo.png" alt="Express Delivery logo" /></div><p>Worldwide shipping and a clear tracking experience.</p></div>
+      <div><div class="badge">Customer support available</div><div class="kicker" style="margin-top:10px;">&copy; <span id="year"></span> Express Delivery. All rights reserved.</div></div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="track.js"></script>
+  <script src="nav.js"></script>
+</body>
+</html>

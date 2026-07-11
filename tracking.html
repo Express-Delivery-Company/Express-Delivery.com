@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Live Tracking | Express Delivery</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body class="tracking-page">
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html"><img class="brand-logo" src="assets/express-delivery-logo.png" alt="Express Delivery logo" /></a>
+    <div class="nav-cta">
+      <a class="btn ghost" href="track.html">Back</a>
+      <a class="btn primary" href="ship.html">Ship Now</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="tracking-hero">
+    <div class="container">
+      <div class="tracking-status">
+        <div>
+          <span class="status-chip">Live tracking</span>
+          <h1>Shipment Tracking</h1>
+          <p>Current location, shipment details, and route updates.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="track-alert-wrap" id="trackAlertWrap" hidden>
+    <div class="container">
+      <div class="track-alert">
+        <div class="track-alert-text" id="trackAlertText"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section tracking-section">
+    <div class="container tracking-layout">
+
+      <div class="mapWrap map-shell">
+        <div class="map-toolbar">
+          <span>Current location</span>
+          <span>Route view</span>
+        </div>
+        <div id="map"></div>
+      </div>
+
+      <div class="side">
+        <div class="infoCard">
+          <h3>Shipment Summary</h3>
+          <div class="kv" id="summaryKv"></div>
+        </div>
+
+        <div class="infoCard current-location-card">
+          <span class="status-chip current-chip">Current package location</span>
+          <div id="currentStop"></div>
+        </div>
+
+        <details class="infoCard route-history-card">
+          <summary>
+            <span>Route History</span>
+            <b>Expand</b>
+          </summary>
+          <div class="timeline" id="timeline"></div>
+        </details>
+
+        <div class="infoCard">
+          <h3>Customer Notes</h3>
+          <ul class="mini-list">
+            <li>Customs messages are sent to the email connected to the shipment.</li>
+            <li>Route history updates show passed, current, and upcoming locations.</li>
+            <li>Contact support with the Order ID if documentation is requested.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="main.js"></script>
+<script src="tracking.js"></script>
+</body>
+</html>

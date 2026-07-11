@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FAQ | Express Delivery</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html"><img class="brand-logo" src="assets/express-delivery-logo.png" alt="Express Delivery logo" /></a>
+      <button class="menu-btn" type="button" aria-label="Open menu" data-menu-btn>&#9776;</button>
+      <nav class="nav-links" data-nav>
+        <a href="index.html">Home</a>
+        <a href="ship.html">Ship With Us</a>
+        <a href="track.html">Track Shipment</a>
+        <a href="about.html">About</a>
+        <a href="faq.html" class="active">FAQ</a>
+        <a href="contact.html">Contact</a>
+        <div class="nav-mobile-cta"><a class="btn ghost" href="track.html">Track</a><a class="btn primary" href="ship.html">Ship Now</a></div>
+      </nav>
+      <div class="nav-cta nav-cta-desktop"><a class="btn ghost" href="track.html">Track</a><a class="btn primary" href="ship.html">Ship Now</a></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="pagehead">
+      <div class="container">
+        <h1>Frequently Asked Questions</h1>
+        <p>Quick answers about shipment requests, tracking, and package handling.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container faq-list">
+        <article class="faq-item">
+          <h3>How long does delivery take?</h3>
+          <p>Delivery time depends on the route, service type, customs requirements, and package handling needs. Express Air is usually faster than standard shipping.</p>
+        </article>
+        <article class="faq-item">
+          <h3>How do I track my shipment?</h3>
+          <p>Go to the Track Shipment page, enter your Order ID and email address, then view the tracking map and route history.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Can I ship fragile goods?</h3>
+          <p>Yes. Include fragile handling notes in your goods description so the team can advise on packaging and route requirements.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Is this connected to live GPS?</h3>
+          <p>The current tracking page can later be connected to a database, customer accounts, payment, and real-time GPS updates.</p>
+        </article>
+        <article class="faq-item">
+          <h3>What information should I include in a shipment request?</h3>
+          <p>Include pickup country, destination country, package type, quantity, weight estimate, fragile notes, and clear packaging details when possible.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Why might a shipment be held?</h3>
+          <p>Customs checks, incomplete documentation, restricted goods, route delays, or carrier inspections can pause a shipment while the issue is reviewed.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Can support update my shipment details?</h3>
+          <p>Yes. Contact support with your Order ID, email address, and the detail that needs correction so the team can review it.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><div class="brand"><img class="brand-logo" src="assets/express-delivery-logo.png" alt="Express Delivery logo" /></div><p>Worldwide shipping and a clear tracking experience.</p></div>
+      <div><div class="badge">Customer support available</div><div class="kicker" style="margin-top:10px;">&copy; <span id="year"></span> Express Delivery. All rights reserved.</div></div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="nav.js"></script>
+</body>
+</html>
