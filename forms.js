@@ -1,5 +1,5 @@
 (() => {
-  const forms = document.querySelectorAll("[data-formspree-form]");
+  const forms = document.querySelectorAll("[data-managed-form]");
 
   forms.forEach((form) => {
     const status = form.querySelector("[data-form-status]");
@@ -12,8 +12,8 @@
       const successUrl = form.dataset.success || "submitted.html";
       const redirectUrl = new URL(successUrl, window.location.href).href;
 
-      if (!endpoint || endpoint === "https://formspree.io/f/") {
-        setStatus(status, "Formspree is not connected yet. Add your real Formspree form endpoint first.", "error");
+      if (!endpoint) {
+        setStatus(status, "This request channel is not available right now. Please try again later.", "error");
         return;
       }
 
@@ -29,40 +29,35 @@
         });
 
         if (!response.ok) {
-          throw new Error(await getErrorMessage(response));
+          throw new Error(getFriendlyError(response.status));
         }
 
         window.location.href = successUrl;
       } catch (error) {
-        const message = error?.message || "";
-        if (message && message !== "Failed to fetch" && message !== "NetworkError when attempting to fetch resource.") {
-          setStatus(status, message, "error");
-          setLoading(submitButton, false);
-          return;
-        }
-
-        setStatus(status, "Opening secure form submission...", "pending");
-        HTMLFormElement.prototype.submit.call(form);
+        setStatus(status, error?.message || "We could not send your request. Please check the details and try again.", "error");
+        setLoading(submitButton, false);
       }
     });
   });
 
-  async function getErrorMessage(response) {
-    try {
-      const data = await response.json();
-      const errors = data?.errors;
-
-      if (Array.isArray(errors) && errors.length) {
-        return errors.map((error) => error.message || error.field || "Formspree rejected the submission.").join(" ");
-      }
-
-      if (data?.error) return data.error;
-      if (data?.message) return data.message;
-    } catch (error) {
-      return "Formspree rejected the submission. Please check the form details and try again.";
+  function getFriendlyError(status) {
+    if (status === 400 || status === 422) {
+      return "Please check the required details and try again.";
     }
 
-    return "Formspree rejected the submission. Please check the form details and try again.";
+    if (status === 403) {
+      return "We could not verify this request. Please refresh the page and try again.";
+    }
+
+    if (status === 429) {
+      return "We are receiving many requests right now. Please wait a moment and try again.";
+    }
+
+    if (status >= 500) {
+      return "The request channel is temporarily unavailable. Please try again shortly.";
+    }
+
+    return "We could not send your request. Please check the details and try again.";
   }
 
   function ensureHiddenField(form, name, value) {
