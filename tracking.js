@@ -46,6 +46,17 @@ const routeUsDomestic = [
   { place: "Scottsdale, Arizona, USA", time: "16:20", lat: 33.4942, lng: -111.9261, note: "Courier approaching delivery area" }
 ];
 
+const routeShanghaiSacramento = [
+  { place: "Shanghai, China", time: "Day 1 - 09:20", lat: 31.2304, lng: 121.4737, note: "Shipment received and registered at Shanghai origin facility" },
+  { place: "Ningbo-Zhoushan, China", time: "Day 2 - 15:45", lat: 29.8683, lng: 121.5440, note: "Processed for export cargo transfer" },
+  { place: "Busan, South Korea", time: "Day 5 - 11:30", lat: 35.1796, lng: 129.0756, note: "Transferred through East Asia cargo hub" },
+  { place: "Yokohama, Japan", time: "Day 7 - 17:10", lat: 35.4437, lng: 139.6380, note: "International cargo connection confirmed" },
+  { place: "Honolulu, Hawaii, USA", time: "Day 12 - 08:25", lat: 21.3099, lng: -157.8581, note: "Pacific transit checkpoint completed" },
+  { place: "Long Beach, California, USA", time: "Day 16 - 13:50", lat: 33.7701, lng: -118.1937, note: "Arrived at California import gateway" },
+  { place: "Oakland, California, USA", time: "Day 18 - 10:15", lat: 37.8044, lng: -122.2712, note: "Transferred to Northern California regional hub" },
+  { place: "Sacramento, California, USA", time: "Day 19 - 16:40", lat: 38.5816, lng: -121.4944, note: "Destination city delivery region" }
+];
+
 const shipments = {
   "EXD-2048-9921": {
     orderId: "EXD-2048-9921",
@@ -79,8 +90,8 @@ const shipments = {
     eta: "Today",
     weight: "1.5 kg",
     service: "Same Day Express",
-    currentStop: "Phoenix, Arizona, USA",
-    route: routeUsDomestic
+    currentStop: "Shanghai, China",
+    route: routeShanghaiSacramento
   },
   "EXD-9901-7742": {
     orderId: "EXD-9901-7742",
