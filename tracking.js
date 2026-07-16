@@ -83,13 +83,16 @@ const shipments = {
   },
   "EXD-7812-3345": {
     orderId: "EXD-7812-3345",
-    receiver: "Michael Stone",
-    sender: "Grace Wilson",
+    receiver: "Nahum Ross",
+    sender: "Davinci",
     status: "In Transit",
     eta: "7 Days",
     weight: "2 kg",
     service: "International Air Cargo",
-    currentStop: "Shanghai, China",
+    currentStop: "Los Angeles, California, USA",
+    // Day 4 problem stop and customer alert.
+    problemStop: "Los Angeles, California, USA",
+    alertMessage: "Attention: Shipment held at the Day 4 U.S. import gateway in Los Angeles, California. Please check your email for more information and instructions.",
     route: routeShanghaiSacramento
   },
   "EXD-9901-7742": {
