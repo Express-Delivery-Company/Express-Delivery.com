@@ -39,9 +39,9 @@ const routeCroatiaAustria = [
   { place: "Chicago, Illinois, USA", time: "Day 21 - 15:30", lat: 41.8781, lng: -87.6298, note: "Transferred to Midwest regional distribution hub" }
 ];
 
-const routeZagrebOttawa = [
-  { place: "Zagreb, Croatia", time: "Day 1 - 09:15", lat: 45.8150, lng: 15.9819, note: "Shipment received and registered at Zagreb origin facility" },
-  { place: "Zagreb Airport, Croatia", time: "Day 2 - 07:40", lat: 45.7429, lng: 16.0688, note: "Export documentation reviewed and shipment prepared for air transfer" },
+const routeSarajevoOttawa = [
+  { place: "Sarajevo, Bosnia and Herzegovina", time: "Day 1 - 09:15", lat: 43.8563, lng: 18.4131, note: "Shipment received and registered at Sarajevo origin facility" },
+  { place: "Sarajevo International Airport, Bosnia and Herzegovina", time: "Day 2 - 07:40", lat: 43.8246, lng: 18.3315, note: "Export documentation reviewed and shipment prepared for air transfer" },
   { place: "Frankfurt, Germany", time: "Day 4 - 16:20", lat: 50.0379, lng: 8.5622, note: "Processed through European air cargo hub" },
   { place: "Toronto Pearson, Ontario, Canada", time: "Day 8 - 11:35", lat: 43.6777, lng: -79.6248, note: "Arrived at Canadian import gateway for customs review" },
   { place: "Mississauga, Ontario, Canada", time: "Day 11 - 14:10", lat: 43.5890, lng: -79.6441, note: "Released to Ontario regional sorting network" },
@@ -88,10 +88,10 @@ const shipments = {
     eta: "14 - 28 Days",
     weight: "10 kg",
     service: "International Economy Air Cargo",
-    currentStop: "Zagreb, Croatia",
+    currentStop: "Sarajevo, Bosnia and Herzegovina",
         // problemStop: "Halifax, Canada",
     // alertMessage: "Attention: Shipment held by customs authorities in Halifax, Canada. Please check your email for more information and instructions.",
-    route: routeZagrebOttawa
+    route: routeSarajevoOttawa
   },
   "EXD-7812-3345": {
     orderId: "EXD-7812-3345",
