@@ -39,6 +39,16 @@ const routeCroatiaAustria = [
   { place: "Chicago, Illinois, USA", time: "Day 21 - 15:30", lat: 41.8781, lng: -87.6298, note: "Transferred to Midwest regional distribution hub" }
 ];
 
+const routeZagrebOttawa = [
+  { place: "Zagreb, Croatia", time: "Day 1 - 09:15", lat: 45.8150, lng: 15.9819, note: "Shipment received and registered at Zagreb origin facility" },
+  { place: "Zagreb Airport, Croatia", time: "Day 2 - 07:40", lat: 45.7429, lng: 16.0688, note: "Export documentation reviewed and shipment prepared for air transfer" },
+  { place: "Frankfurt, Germany", time: "Day 4 - 16:20", lat: 50.0379, lng: 8.5622, note: "Processed through European air cargo hub" },
+  { place: "Toronto Pearson, Ontario, Canada", time: "Day 8 - 11:35", lat: 43.6777, lng: -79.6248, note: "Arrived at Canadian import gateway for customs review" },
+  { place: "Mississauga, Ontario, Canada", time: "Day 11 - 14:10", lat: 43.5890, lng: -79.6441, note: "Released to Ontario regional sorting network" },
+  { place: "Kingston, Ontario, Canada", time: "Day 17 - 10:25", lat: 44.2312, lng: -76.4860, note: "Transferred along eastern Ontario ground route" },
+  { place: "Ottawa, Ontario, Canada", time: "Day 21 - 15:50", lat: 45.4215, lng: -75.6972, note: "Destination city delivery region" }
+];
+
 const routeUsDomestic = [
   { place: "Los Angeles, California, USA", time: "08:00", lat: 34.0522, lng: -118.2437, note: "Package received by same-day dispatch" },
   { place: "Riverside, California, USA", time: "10:15", lat: 33.9806, lng: -117.3755, note: "Sorted for local courier transfer" },
@@ -75,11 +85,13 @@ const shipments = {
     receiver: "Martin Gauthier",
     sender: "Iva Trogrlic",
     status: "In Transit",
-    eta: "24 Business Days",
-    weight: "23 kg",
-    service: "Express Ground",
-    currentStop: "Vienna, Austria",
-    route: routeCroatiaAustria
+    eta: "14 - 28 Days",
+    weight: "10 kg",
+    service: "International Economy Air Cargo",
+    currentStop: "Zagreb, Croatia",
+        // problemStop: "Halifax, Canada",
+    // alertMessage: "Attention: Shipment held by customs authorities in Halifax, Canada. Please check your email for more information and instructions.",
+    route: routeZagrebOttawa
   },
   "EXD-7812-3345": {
     orderId: "EXD-7812-3345",

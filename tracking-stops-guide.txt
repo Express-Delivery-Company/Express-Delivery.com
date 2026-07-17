@@ -1,0 +1,92 @@
+TRACKING STOPS GUIDE
+
+Use these exact stop names when editing currentStop or problemStop in tracking.js.
+The text must match exactly, including commas and country/state names.
+
+EXD-2048-9921
+Route: Stockholm, Sweden to St. Joseph, Missouri, USA
+Stops:
+Stockholm, Sweden
+Gothenburg, Sweden
+Copenhagen, Denmark
+Hamburg, Germany
+Rotterdam, Netherlands
+London, United Kingdom
+Reykjavik, Iceland
+Halifax, Canada
+New York, USA
+Chicago, Illinois, USA
+Kansas City, Missouri, USA
+St. Joseph, Missouri, USA
+
+EXD-4587-1204
+Route: Zagreb, Croatia to Ottawa, Ontario, Canada
+Stops:
+Zagreb, Croatia
+Zagreb Airport, Croatia
+Frankfurt, Germany
+Toronto Pearson, Ontario, Canada
+Mississauga, Ontario, Canada
+Kingston, Ontario, Canada
+Ottawa, Ontario, Canada
+
+EXD-7812-3345
+Route: Shanghai, China to Sacramento, California, USA
+Stops:
+Shanghai, China
+Shanghai Pudong International Airport, China
+Anchorage, Alaska, USA
+Los Angeles, California, USA
+Ontario, California, USA
+Oakland, California, USA
+Sacramento, California, USA
+
+EXD-9901-7742
+Route: Croatia/Europe to North America
+Stops:
+Zagreb, Croatia
+Vienna, Austria
+Munich, Germany
+Frankfurt, Germany
+Amsterdam, Netherlands
+London, United Kingdom
+Reykjavik, Iceland
+Halifax, Canada
+New York, USA
+Chicago, Illinois, USA
+
+EXD-6633-1188
+Route: Croatia/Europe to North America
+Stops:
+Zagreb, Croatia
+Vienna, Austria
+Munich, Germany
+Frankfurt, Germany
+Amsterdam, Netherlands
+London, United Kingdom
+Reykjavik, Iceland
+Halifax, Canada
+New York, USA
+Chicago, Illinois, USA
+
+EXD-4402-5567
+Route: Croatia/Europe to North America
+Stops:
+Zagreb, Croatia
+Vienna, Austria
+Munich, Germany
+Frankfurt, Germany
+Amsterdam, Netherlands
+London, United Kingdom
+Reykjavik, Iceland
+Halifax, Canada
+New York, USA
+Chicago, Illinois, USA
+
+EXD-8754-2219
+Route: Los Angeles, California, USA to Scottsdale, Arizona, USA
+Stops:
+Los Angeles, California, USA
+Riverside, California, USA
+Phoenix, Arizona, USA
+Scottsdale, Arizona, USA
