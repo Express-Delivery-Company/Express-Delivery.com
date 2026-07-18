@@ -39,14 +39,15 @@ const routeCroatiaAustria = [
   { place: "Chicago, Illinois, USA", time: "Day 21 - 15:30", lat: 41.8781, lng: -87.6298, note: "Transferred to Midwest regional distribution hub" }
 ];
 
-const routeSarajevoOttawa = [
-  { place: "Sarajevo, Bosnia and Herzegovina", time: "Day 1 - 09:15", lat: 43.8563, lng: 18.4131, note: "Shipment received and registered at Sarajevo origin facility" },
-  { place: "Sarajevo International Airport, Bosnia and Herzegovina", time: "Day 2 - 07:40", lat: 43.8246, lng: 18.3315, note: "Export documentation reviewed and shipment prepared for air transfer" },
-  { place: "Frankfurt, Germany", time: "Day 4 - 16:20", lat: 50.0379, lng: 8.5622, note: "Processed through European air cargo hub" },
-  { place: "Toronto Pearson, Ontario, Canada", time: "Day 8 - 11:35", lat: 43.6777, lng: -79.6248, note: "Arrived at Canadian import gateway for customs review" },
-  { place: "Mississauga, Ontario, Canada", time: "Day 11 - 14:10", lat: 43.5890, lng: -79.6441, note: "Released to Ontario regional sorting network" },
-  { place: "Kingston, Ontario, Canada", time: "Day 17 - 10:25", lat: 44.2312, lng: -76.4860, note: "Transferred along eastern Ontario ground route" },
-  { place: "Ottawa, Ontario, Canada", time: "Day 21 - 15:50", lat: 45.4215, lng: -75.6972, note: "Destination city delivery region" }
+const routeSarajevoOttawaOcean = [
+  { place: "Sarajevo, Bosnia and Herzegovina", time: "Day 1 - 09:15", lat: 43.8563, lng: 18.4131, note: "Heavy cargo received and prepared for inland transfer to port" },
+  { place: "Port of Ploce, Croatia", time: "Day 3 - 13:40", lat: 43.0525, lng: 17.4327, note: "Cargo checked in at Adriatic export port" },
+  { place: "Port of Venice, Italy", time: "Day 7 - 10:20", lat: 45.4408, lng: 12.3155, note: "Container transferred through northern Adriatic freight terminal" },
+  { place: "Port of Marsaxlokk, Malta", time: "Day 11 - 16:35", lat: 35.8419, lng: 14.5431, note: "Mediterranean transshipment stop completed" },
+  { place: "Port of Valencia, Spain", time: "Day 15 - 09:50", lat: 39.4484, lng: -0.3167, note: "Container processed through western Mediterranean cargo hub" },
+  { place: "Port of Sines, Portugal", time: "Day 19 - 14:25", lat: 37.9500, lng: -8.8667, note: "Atlantic crossing departure confirmed" },
+  { place: "Port of Montreal, Quebec, Canada", time: "Day 30 - 11:10", lat: 45.5600, lng: -73.5400, note: "Arrived at Canadian ocean freight gateway for import processing" },
+  { place: "Ottawa, Ontario, Canada", time: "Day 34 - 15:50", lat: 45.4215, lng: -75.6972, note: "Final inland delivery region after customs release" }
 ];
 
 const routeUsDomestic = [
@@ -85,13 +86,13 @@ const shipments = {
     receiver: "Martin Gauthier",
     sender: "Iva Trogrlic",
     status: "In Transit",
-    eta: "14 - 28 Days",
-    weight: "10 kg",
-    service: "International Economy Air Cargo",
+    eta: "28 - 35 Days",
+    weight: "10,000 kg",
+    service: "International Ocean Freight",
     currentStop: "Sarajevo, Bosnia and Herzegovina",
         // problemStop: "Halifax, Canada",
     // alertMessage: "Attention: Shipment held by customs authorities in Halifax, Canada. Please check your email for more information and instructions.",
-    route: routeSarajevoOttawa
+    route: routeSarajevoOttawaOcean
   },
   "EXD-7812-3345": {
     orderId: "EXD-7812-3345",

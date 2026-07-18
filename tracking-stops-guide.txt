@@ -20,14 +20,15 @@ Kansas City, Missouri, USA
 St. Joseph, Missouri, USA
 
 EXD-4587-1204
-Route: Sarajevo, Bosnia and Herzegovina to Ottawa, Ontario, Canada
+Route: Sarajevo, Bosnia and Herzegovina to Ottawa, Ontario, Canada by ocean freight
 Stops:
 Sarajevo, Bosnia and Herzegovina
-Sarajevo International Airport, Bosnia and Herzegovina
-Frankfurt, Germany
-Toronto Pearson, Ontario, Canada
-Mississauga, Ontario, Canada
-Kingston, Ontario, Canada
+Port of Ploce, Croatia
+Port of Venice, Italy
+Port of Marsaxlokk, Malta
+Port of Valencia, Spain
+Port of Sines, Portugal
+Port of Montreal, Quebec, Canada
 Ottawa, Ontario, Canada
 
 EXD-7812-3345
