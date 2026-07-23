@@ -102,10 +102,10 @@ const shipments = {
     eta: "7 Days",
     weight: "2 kg",
     service: "International Air Cargo",
-    currentStop: "Los Angeles, California, USA",
+    currentStop: "Ontario, California, USA",
     // Day 4 problem stop and customer alert.
-    problemStop: "Los Angeles, California, USA",
-    alertMessage: "Attention: Shipment held at the Day 4 U.S. import gateway in Los Angeles, California. Please check your email for more information and instructions.",
+    //problemStop: "Los Angeles, California, USA",
+    //alertMessage: "Attention: Shipment held at the Day 4 U.S. import gateway in Los Angeles, California. Please check your email for more information and instructions.",
     route: routeShanghaiSacramento
   },
   "EXD-9901-7742": {
