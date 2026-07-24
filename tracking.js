@@ -89,7 +89,7 @@ const shipments = {
     eta: "28 - 35 Days",
     weight: "10,000 kg",
     service: "International Ocean Freight",
-    currentStop: "Sarajevo, Bosnia and Herzegovina",
+    currentStop: "Port of Ploce, Croatia",
         // problemStop: "Halifax, Canada",
     // alertMessage: "Attention: Shipment held by customs authorities in Halifax, Canada. Please check your email for more information and instructions.",
     route: routeSarajevoOttawaOcean
