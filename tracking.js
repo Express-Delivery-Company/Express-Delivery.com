@@ -67,6 +67,19 @@ const routeShanghaiSacramento = [
   { place: "Sacramento, California, USA", time: "Day 7 - 16:40", lat: 38.5816, lng: -121.4944, note: "Destination city delivery region" }
 ];
 
+
+const routeNewYorkLyonEconomy = [
+  { place: "New York City, New York, USA", time: "Day 1 - 09:10", lat: 40.7128, lng: -74.0060, note: "Shipment received and registered for economy international freight service" },
+  { place: "John F. Kennedy International Airport (JFK), New York, USA", time: "Day 3 - 15:25", lat: 40.6413, lng: -73.7781, note: "Cargo security screening completed and placed into consolidated export storage awaiting scheduled departure" },
+  { place: "Shannon Airport Cargo Centre, Ireland", time: "Day 16 - 08:40", lat: 52.7019, lng: -8.9248, note: "Shipment processed through international cargo hub and transferred to consolidated European freight network" },
+  { place: "Liège Airport Cargo Terminal, Belgium", time: "Day 34 - 12:15", lat: 50.6374, lng: 5.4432, note: "Cargo temporarily warehoused pending scheduled regional forwarding and customs documentation review" },
+  { place: "Charles de Gaulle Airport (CDG), Paris, France", time: "Day 57 - 10:30", lat: 49.0097, lng: 2.5479, note: "Shipment arrived at French import gateway and entered customs clearance procedures" },
+  { place: "Lyon Regional Distribution Centre, Lyon, France", time: "Day 73 - 14:50", lat: 45.7640, lng: 4.8357, note: "Released from customs and transferred to local distribution network for final delivery scheduling" },
+  { place: "Lyon, France", time: "Day 82 - 11:20", lat: 45.7640, lng: 4.8357, note: "Shipment delivered successfully to the consignee after completion of economy freight transit process" }
+];
+
+
+
 const shipments = {
   "EXD-2048-9921": {
     orderId: "EXD-2048-9921",
@@ -108,17 +121,25 @@ const shipments = {
     //alertMessage: "Attention: Shipment held at the Day 4 U.S. import gateway in Los Angeles, California. Please check your email for more information and instructions.",
     route: routeShanghaiSacramento
   },
+  
+  
+  
   "EXD-9901-7742": {
-    orderId: "EXD-9901-7742",
-    receiver: "Emily Brown",
-    sender: "Daniel Scott",
-    status: "In Transit",
-    eta: "4 - 6 Business Days",
-    weight: "5.1 kg",
-    service: "International Air",
-    currentStop: "Amsterdam, Netherlands",
-    route: routeCroatiaAustria
-  },
+  orderId: "EXD-6734-9821",
+  receiver: "Francois Callaud",
+  sender: "Ashley Perkins",
+  status: "In Transit",
+  eta: "60 - 90 Days",
+  weight: "22 lb",
+  service: "International Economy Freight",
+  currentStop: "New York City, New York, USA",
+  // problemStop: "Charles de Gaulle Airport (CDG), Paris, France",
+  // alertMessage: "Attention: Shipment is awaiting completion of customs processing before release to the regional distribution network. Please check your email if further documentation is required.",
+  route: routeNewYorkLyonEconomy
+},
+  
+  
+ 
   "EXD-6633-1188": {
     orderId: "EXD-6633-1188",
     receiver: "Sophia White",
