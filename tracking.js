@@ -270,34 +270,8 @@ const shipments = {
 },
   
   
- 
   "EXD-6633-1188": {
-    orderId: "EXD-6633-1188",
-    receiver: "Sophia White",
-    sender: "James Walker",
-    status: "Arrived at Hub",
-    eta: "1 - 2 Business Days",
-    weight: "3.7 kg",
-    service: "Priority Express",
-    currentStop: "Frankfurt, Germany",
-    route: routeCroatiaAustria
-  },
-  "EXD-4402-5567": {
-    orderId: "EXD-4402-5567",
-    receiver: "Olivia Green",
-    sender: "Chris Adams",
-    status: "Customs Clearance",
-    eta: "5 - 7 Business Days",
-    weight: "6.0 kg",
-    service: "International Cargo",
-    currentStop: "Halifax, Canada",
-    problemStop: "Halifax, Canada",
-    alertMessage: "Attention: Shipment is under customs clearance in Halifax, Canada. Additional instructions may be sent to the tracking email.",
-    route: routeCroatiaAustria
-  },
-  
-  "EXD-7924-3618": {
-  orderId: "EXD-7924-3618",
+  orderId: "EXD-6633-1188",
   receiver: "Donna Raye Morgan",
   sender: "Russell Hartley",
   status: "In Transit",
@@ -313,8 +287,8 @@ const shipments = {
 },
 
 
-"EXD-8462-5179": {
-  orderId: "EXD-8462-5179",
+"EXD-4402-5567": {
+  orderId: "EXD-4402-5567",
   receiver: "Siobhan Smith",
   sender: "Russell Hartley",
   status: "In Transit",
