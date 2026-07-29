@@ -78,134 +78,51 @@ const routeNewYorkLyonEconomy = [
   { place: "Lyon, France", time: "Day 82 - 11:20", lat: 45.7640, lng: 4.8357, note: "Shipment delivered successfully to the consignee after completion of economy freight transit process" }
 ];
 
-const routeBeverlyHillsRoyseCityEconomy = [
+
+const routeBeverlyHillsFortPierceExpress = [
+  { place: "Beverly Hills, California, USA", time: "Day 1 - 08:30", lat: 34.0736, lng: -118.4004, note: "Shipment collected and transferred to express freight facility" },
+  { place: "Ontario Freight Distribution Center, California, USA", time: "Day 1 - 12:45", lat: 34.0633, lng: -117.6509, note: "Express sorting completed and dispatched for cross-country transport" },
+  { place: "Dallas Freight Hub, Texas, USA", time: "Day 2 - 09:15", lat: 32.7767, lng: -96.7970, note: "Shipment processed through central express distribution hub" },
+  { place: "Orlando Distribution Facility, Florida, USA", time: "Day 3 - 07:40", lat: 28.5383, lng: -81.3792, note: "Shipment arrived in Florida and transferred for final delivery" },
+  { place: "Fort Pierce, Florida, USA", time: "Day 3 - 15:20", lat: 27.4467, lng: -80.3256, note: "Shipment successfully delivered to the receiver" }
+];
+  
+
+
+const routeBeverlyHillsRoyseCityExpress = [
   {
     place: "Beverly Hills, California, USA",
-    time: "Day 1 - 08:40",
+    time: "Day 1 - 08:15",
     lat: 34.0736,
     lng: -118.4004,
-    note: "Shipment collected from sender and transferred to the local freight facility"
+    note: "Shipment collected and prepared for express transportation"
   },
   {
     place: "Ontario Freight Distribution Center, California, USA",
-    time: "Day 1 - 15:10",
+    time: "Day 1 - 12:30",
     lat: 34.0633,
     lng: -117.6509,
-    note: "Shipment sorted and loaded for interstate freight movement"
+    note: "Shipment sorted and dispatched for interstate express delivery"
   },
   {
     place: "Phoenix Logistics Hub, Arizona, USA",
-    time: "Day 2 - 10:35",
+    time: "Day 2 - 07:50",
     lat: 33.4484,
     lng: -112.0740,
-    note: "Regional transfer completed and prepared for eastbound transportation"
-  },
-  {
-    place: "Tucson Freight Terminal, Arizona, USA",
-    time: "Day 2 - 17:20",
-    lat: 32.2226,
-    lng: -110.9747,
-    note: "Shipment processed through scheduled freight connection"
-  },
-  {
-    place: "El Paso Distribution Center, Texas, USA",
-    time: "Day 3 - 13:05",
-    lat: 31.7619,
-    lng: -106.4850,
-    note: "Shipment entered Texas freight network and underwent routine inspection"
-  },
-  {
-    place: "Midland Logistics Hub, Texas, USA",
-    time: "Day 4 - 09:40",
-    lat: 31.9973,
-    lng: -102.0779,
-    note: "Cargo transferred to northbound regional freight service"
+    note: "Regional transfer completed and routed toward the destination state"
   },
   {
     place: "Dallas Freight Distribution Center, Texas, USA",
-    time: "Day 5 - 14:25",
+    time: "Day 3 - 08:10",
     lat: 32.7767,
     lng: -96.7970,
-    note: "Shipment sorted for final-mile regional distribution"
-  },
-  {
-    place: "Royse City Delivery Terminal, Texas, USA",
-    time: "Day 6 - 09:30",
-    lat: 32.9751,
-    lng: -96.3325,
-    note: "Shipment arrived at destination terminal awaiting local delivery"
+    note: "Shipment arrived at the regional distribution hub and prepared for final dispatch"
   },
   {
     place: "Royse City, Texas, USA",
-    time: "Day 6 - 15:45",
+    time: "Day 3 - 15:40",
     lat: 32.9751,
     lng: -96.3325,
-    note: "Shipment successfully delivered to the receiver"
-  }
-];
-
-const routeBeverlyHillsFortPierceEconomy = [
-  {
-    place: "Beverly Hills, California, USA",
-    time: "Day 1 - 09:20",
-    lat: 34.0736,
-    lng: -118.4004,
-    note: "Shipment collected from sender and transferred to the local freight facility"
-  },
-  {
-    place: "Ontario Freight Distribution Center, California, USA",
-    time: "Day 1 - 16:45",
-    lat: 34.0633,
-    lng: -117.6509,
-    note: "Shipment sorted, scanned, and prepared for interstate transportation"
-  },
-  {
-    place: "Phoenix Logistics Hub, Arizona, USA",
-    time: "Day 2 - 11:30",
-    lat: 33.4484,
-    lng: -112.0740,
-    note: "Shipment arrived at regional transit hub for scheduled eastbound transfer"
-  },
-  {
-    place: "El Paso Freight Terminal, Texas, USA",
-    time: "Day 3 - 08:50",
-    lat: 31.7619,
-    lng: -106.4850,
-    note: "Cargo inspected and transferred to the next interstate freight vehicle"
-  },
-  {
-    place: "Dallas Distribution Center, Texas, USA",
-    time: "Day 4 - 14:15",
-    lat: 32.7767,
-    lng: -96.7970,
-    note: "Shipment processed through central distribution network"
-  },
-  {
-    place: "Atlanta Freight Hub, Georgia, USA",
-    time: "Day 6 - 09:40",
-    lat: 33.7490,
-    lng: -84.3880,
-    note: "Shipment sorted for southeastern regional delivery"
-  },
-  {
-    place: "Orlando Distribution Facility, Florida, USA",
-    time: "Day 7 - 13:25",
-    lat: 28.5383,
-    lng: -81.3792,
-    note: "Shipment arrived in Florida and was prepared for final regional transfer"
-  },
-  {
-    place: "Fort Pierce Delivery Facility, Florida, USA",
-    time: "Day 8 - 08:35",
-    lat: 27.4467,
-    lng: -80.3256,
-    note: "Shipment received at destination facility and scheduled for final delivery"
-  },
-  {
-    place: "Fort Pierce, Florida, USA",
-    time: "Day 8 - 15:10",
-    lat: 27.4467,
-    lng: -80.3256,
     note: "Shipment successfully delivered to the receiver"
   }
 ];
@@ -275,9 +192,9 @@ const shipments = {
   receiver: "Donna Raye Morgan",
   sender: "Russell Hartley",
   status: "In Transit",
-  eta: "7 - 10 Days",
+  eta: "3 Days",
   weight: "22 lb",
-  service: "Domestic Economy Freight",
+  service: "Domestic Express Freight",
   currentStop: "Beverly Hills, California, USA",
 
   // problemStop: "Dallas Distribution Center, Texas, USA",
@@ -292,9 +209,9 @@ const shipments = {
   receiver: "Siobhan Smith",
   sender: "Russell Hartley",
   status: "In Transit",
-  eta: "5 - 7 Days",
+  eta: "3 Days",
   weight: "22 lb",
-  service: "Domestic Economy Freight",
+  service: "Domestic Express Freight",
   currentStop: "Beverly Hills, California, USA",
 
   // problemStop: "Dallas Freight Distribution Center, Texas, USA",
@@ -314,7 +231,6 @@ const shipments = {
     service: "Express Air",
     currentStop: "Scottsdale, Arizona, USA",
     route: routeUsDomestic
-  }
 };
 
 const summaryKv = document.getElementById("summaryKv");
