@@ -80,6 +80,73 @@ const routeNewYorkLyonEconomy = [
 
 
 
+const routeBeverlyHillsFortPierceEconomy = [
+  {
+    place: "Beverly Hills, California, USA",
+    time: "Day 1 - 09:20",
+    lat: 34.0736,
+    lng: -118.4004,
+    note: "Shipment collected from sender and transferred to the local freight facility"
+  },
+  {
+    place: "Ontario Freight Distribution Center, California, USA",
+    time: "Day 1 - 16:45",
+    lat: 34.0633,
+    lng: -117.6509,
+    note: "Shipment sorted, scanned, and prepared for interstate transportation"
+  },
+  {
+    place: "Phoenix Logistics Hub, Arizona, USA",
+    time: "Day 2 - 11:30",
+    lat: 33.4484,
+    lng: -112.0740,
+    note: "Shipment arrived at regional transit hub for scheduled eastbound transfer"
+  },
+  {
+    place: "El Paso Freight Terminal, Texas, USA",
+    time: "Day 3 - 08:50",
+    lat: 31.7619,
+    lng: -106.4850,
+    note: "Cargo inspected and transferred to the next interstate freight vehicle"
+  },
+  {
+    place: "Dallas Distribution Center, Texas, USA",
+    time: "Day 4 - 14:15",
+    lat: 32.7767,
+    lng: -96.7970,
+    note: "Shipment processed through central distribution network"
+  },
+  {
+    place: "Atlanta Freight Hub, Georgia, USA",
+    time: "Day 6 - 09:40",
+    lat: 33.7490,
+    lng: -84.3880,
+    note: "Shipment sorted for southeastern regional delivery"
+  },
+  {
+    place: "Orlando Distribution Facility, Florida, USA",
+    time: "Day 7 - 13:25",
+    lat: 28.5383,
+    lng: -81.3792,
+    note: "Shipment arrived in Florida and was prepared for final regional transfer"
+  },
+  {
+    place: "Fort Pierce Delivery Facility, Florida, USA",
+    time: "Day 8 - 08:35",
+    lat: 27.4467,
+    lng: -80.3256,
+    note: "Shipment received at destination facility and scheduled for final delivery"
+  },
+  {
+    place: "Fort Pierce, Florida, USA",
+    time: "Day 8 - 15:10",
+    lat: 27.4467,
+    lng: -80.3256,
+    note: "Shipment successfully delivered to the receiver"
+  }
+];
+
+
 const shipments = {
   "EXD-2048-9921": {
     orderId: "EXD-2048-9921",
@@ -164,6 +231,23 @@ const shipments = {
     alertMessage: "Attention: Shipment is under customs clearance in Halifax, Canada. Additional instructions may be sent to the tracking email.",
     route: routeCroatiaAustria
   },
+  
+  "EXD-7924-3618": {
+  orderId: "EXD-7924-3618",
+  receiver: "Donna Raye Morgan",
+  sender: "Russel Hartley",
+  status: "In Transit",
+  eta: "7 - 10 Days",
+  weight: "22 lb",
+  service: "Domestic Economy Freight",
+  currentStop: "Beverly Hills, California, USA",
+
+  // problemStop: "Dallas Distribution Center, Texas, USA",
+  // alertMessage: "Attention: Shipment processing has been temporarily delayed at the Dallas distribution facility. Tracking will update after the next scheduled transfer.",
+
+  route: routeBeverlyHillsFortPierceEconomy
+},
+  
   "EXD-8754-2219": {
     orderId: "EXD-8754-2219",
     receiver: "Ethan Hall",
