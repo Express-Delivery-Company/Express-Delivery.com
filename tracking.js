@@ -84,9 +84,9 @@ const shipments = {
   "EXD-2048-9921": {
     orderId: "EXD-2048-9921",
     receiver: "Pamela F.Campbell",
-    sender: "Anthony Francis",
+    sender: "Anthony Francisco",
     status: "In Transit",
-    eta: "14 - 21 Business Days",
+    eta: "14 Business Days",
     weight: "26 kg",
     service: "International Cargo",
     currentStop: "Stockholm, Sweden",
