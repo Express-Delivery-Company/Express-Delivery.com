@@ -13,17 +13,13 @@ const requestedCode = (params.get("code") || legacyPageCodes[pageName] || "EXD-2
 
 const routeSwedenMissouri = [
   { place: "Stockholm, Sweden", time: "Day 1 - 08:45", lat: 59.3293, lng: 18.0686, note: "Cargo received and registered at origin facility" },
-  { place: "Gothenburg, Sweden", time: "Day 2 - 14:20", lat: 57.7089, lng: 11.9746, note: "Processed for international cargo transfer" },
-  { place: "Copenhagen, Denmark", time: "Day 4 - 10:35", lat: 55.6761, lng: 12.5683, note: "Departed Nordic regional hub" },
-  { place: "Hamburg, Germany", time: "Day 6 - 16:10", lat: 53.5511, lng: 9.9937, note: "Arrived at European cargo handling center" },
-  { place: "Rotterdam, Netherlands", time: "Day 8 - 12:05", lat: 51.9244, lng: 4.4777, note: "Package processed for transatlantic movement" },
-  { place: "London, United Kingdom", time: "Day 10 - 19:30", lat: 51.5072, lng: -0.1276, note: "Transferred to international cargo route" },
-  { place: "Reykjavik, Iceland", time: "Day 12 - 07:50", lat: 64.1466, lng: -21.9426, note: "Technical cargo stop completed" },
-  { place: "Halifax, Canada", time: "Day 15 - 13:25", lat: 44.6488, lng: -63.5752, note: "Arrived in North America for customs inspection" },
-  { place: "New York, USA", time: "Day 17 - 11:15", lat: 40.7128, lng: -74.0060, note: "Awaiting U.S. import gateway processing" },
-  { place: "Chicago, Illinois, USA", time: "Day 19 - 15:40", lat: 41.8781, lng: -87.6298, note: "Scheduled for Midwest regional distribution" },
-  { place: "Kansas City, Missouri, USA", time: "Day 21 - 09:30", lat: 39.0997, lng: -94.5786, note: "Destination region facility" },
-  { place: "St. Joseph, Missouri, USA", time: "Day 21 - 16:10", lat: 39.7675, lng: -94.8467, note: "Final delivery region in Missouri" }
+  { place: "Gothenburg, Sweden", time: "Day 2 - 13:30", lat: 57.7089, lng: 11.9746, note: "Shipment processed for international export" },
+  { place: "Hamburg, Germany", time: "Day 4 - 09:50", lat: 53.5511, lng: 9.9937, note: "Arrived at European cargo hub for transatlantic dispatch" },
+  { place: "Reykjavik, Iceland", time: "Day 6 - 07:20", lat: 64.1466, lng: -21.9426, note: "Technical cargo stop and flight transfer completed" },
+  { place: "Halifax, Nova Scotia, Canada", time: "Day 8 - 12:10", lat: 44.6488, lng: -63.5752, note: "Shipment entered North American logistics network and completed customs pre-clearance" },
+  { place: "Chicago, Illinois, USA", time: "Day 10 - 10:40", lat: 41.8781, lng: -87.6298, note: "Processed through Midwest regional distribution center" },
+  { place: "Kansas City, Missouri, USA", time: "Day 12 - 14:15", lat: 39.0997, lng: -94.5786, note: "Transferred to final regional delivery network" },
+  { place: "St. Joseph, Missouri, USA", time: "Day 14 - 11:30", lat: 39.7675, lng: -94.8467, note: "Shipment successfully delivered after customs clearance and regional distribution" }
 ];
 
 const routeCroatiaAustria = [
