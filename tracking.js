@@ -78,7 +78,71 @@ const routeNewYorkLyonEconomy = [
   { place: "Lyon, France", time: "Day 82 - 11:20", lat: 45.7640, lng: 4.8357, note: "Shipment delivered successfully to the consignee after completion of economy freight transit process" }
 ];
 
-
+const routeBeverlyHillsRoyseCityEconomy = [
+  {
+    place: "Beverly Hills, California, USA",
+    time: "Day 1 - 08:40",
+    lat: 34.0736,
+    lng: -118.4004,
+    note: "Shipment collected from sender and transferred to the local freight facility"
+  },
+  {
+    place: "Ontario Freight Distribution Center, California, USA",
+    time: "Day 1 - 15:10",
+    lat: 34.0633,
+    lng: -117.6509,
+    note: "Shipment sorted and loaded for interstate freight movement"
+  },
+  {
+    place: "Phoenix Logistics Hub, Arizona, USA",
+    time: "Day 2 - 10:35",
+    lat: 33.4484,
+    lng: -112.0740,
+    note: "Regional transfer completed and prepared for eastbound transportation"
+  },
+  {
+    place: "Tucson Freight Terminal, Arizona, USA",
+    time: "Day 2 - 17:20",
+    lat: 32.2226,
+    lng: -110.9747,
+    note: "Shipment processed through scheduled freight connection"
+  },
+  {
+    place: "El Paso Distribution Center, Texas, USA",
+    time: "Day 3 - 13:05",
+    lat: 31.7619,
+    lng: -106.4850,
+    note: "Shipment entered Texas freight network and underwent routine inspection"
+  },
+  {
+    place: "Midland Logistics Hub, Texas, USA",
+    time: "Day 4 - 09:40",
+    lat: 31.9973,
+    lng: -102.0779,
+    note: "Cargo transferred to northbound regional freight service"
+  },
+  {
+    place: "Dallas Freight Distribution Center, Texas, USA",
+    time: "Day 5 - 14:25",
+    lat: 32.7767,
+    lng: -96.7970,
+    note: "Shipment sorted for final-mile regional distribution"
+  },
+  {
+    place: "Royse City Delivery Terminal, Texas, USA",
+    time: "Day 6 - 09:30",
+    lat: 32.9751,
+    lng: -96.3325,
+    note: "Shipment arrived at destination terminal awaiting local delivery"
+  },
+  {
+    place: "Royse City, Texas, USA",
+    time: "Day 6 - 15:45",
+    lat: 32.9751,
+    lng: -96.3325,
+    note: "Shipment successfully delivered to the receiver"
+  }
+];
 
 const routeBeverlyHillsFortPierceEconomy = [
   {
@@ -192,7 +256,7 @@ const shipments = {
   
   
   "EXD-9901-7742": {
-  orderId: "EXD-6734-9821",
+  orderId: "EXD-9901-7742",
   receiver: "Francois Callaud",
   sender: "Ashley Perkins",
   status: "In Transit",
@@ -235,7 +299,7 @@ const shipments = {
   "EXD-7924-3618": {
   orderId: "EXD-7924-3618",
   receiver: "Donna Raye Morgan",
-  sender: "Russel Hartley",
+  sender: "Russell Hartley",
   status: "In Transit",
   eta: "7 - 10 Days",
   weight: "22 lb",
@@ -247,6 +311,24 @@ const shipments = {
 
   route: routeBeverlyHillsFortPierceEconomy
 },
+
+
+"EXD-8462-5179": {
+  orderId: "EXD-8462-5179",
+  receiver: "Siobhan Smith",
+  sender: "Russell Hartley",
+  status: "In Transit",
+  eta: "5 - 7 Days",
+  weight: "22 lb",
+  service: "Domestic Economy Freight",
+  currentStop: "Beverly Hills, California, USA",
+
+  // problemStop: "Dallas Freight Distribution Center, Texas, USA",
+  // alertMessage: "Attention: Shipment is awaiting the next scheduled dispatch from the Dallas distribution center due to freight consolidation.",
+
+  route: routeBeverlyHillsRoyseCityEconomy
+},
+
   
   "EXD-8754-2219": {
     orderId: "EXD-8754-2219",
