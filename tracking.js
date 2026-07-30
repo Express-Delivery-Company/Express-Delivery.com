@@ -227,6 +227,7 @@ const shipments = {
     service: "Express Air",
     currentStop: "Scottsdale, Arizona, USA",
     route: routeUsDomestic
+}
 };
 
 const summaryKv = document.getElementById("summaryKv");
