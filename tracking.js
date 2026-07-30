@@ -196,7 +196,7 @@ const shipments = {
   // problemStop: "Dallas Distribution Center, Texas, USA",
   // alertMessage: "Attention: Shipment processing has been temporarily delayed at the Dallas distribution facility. Tracking will update after the next scheduled transfer.",
 
-  route: routeBeverlyHillsFortPierceEconomy
+  route: routeBeverlyHillsFortPierceExpress
 },
 
 
@@ -213,7 +213,7 @@ const shipments = {
   // problemStop: "Dallas Freight Distribution Center, Texas, USA",
   // alertMessage: "Attention: Shipment is awaiting the next scheduled dispatch from the Dallas distribution center due to freight consolidation.",
 
-  route: routeBeverlyHillsRoyseCityEconomy
+  route: routeBeverlyHillsRoyseCityExpress
 },
 
   
