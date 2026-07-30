@@ -189,7 +189,7 @@ const shipments = {
   sender: "Russell Hartley",
   status: "In Transit",
   eta: "3 Days",
-  weight: "22 lb",
+  weight: "5300 lb",
   service: "Domestic Express Freight",
   currentStop: "Beverly Hills, California, USA",
 
@@ -206,7 +206,7 @@ const shipments = {
   sender: "Russell Hartley",
   status: "In Transit",
   eta: "3 Days",
-  weight: "22 lb",
+  weight: "5300 lb",
   service: "Domestic Express Freight",
   currentStop: "Beverly Hills, California, USA",
 
