@@ -208,7 +208,7 @@ const shipments = {
   eta: "3 Days",
   weight: "5300 lb",
   service: "Domestic Express Freight",
-  currentStop: "Beverly Hills, California, USA",
+  currentStop: "Ontario Freight Distribution Center, California, USA",
 
   // problemStop: "Dallas Freight Distribution Center, Texas, USA",
   // alertMessage: "Attention: Shipment is awaiting the next scheduled dispatch from the Dallas distribution center due to freight consolidation.",
