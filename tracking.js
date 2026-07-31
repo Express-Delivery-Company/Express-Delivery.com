@@ -191,7 +191,7 @@ const shipments = {
   eta: "3 Days",
   weight: "5300 lb",
   service: "Domestic Express Freight",
-  currentStop: "Beverly Hills, California, USA",
+  currentStop: "Ontario Freight Distribution Center, California, USA",
 
   // problemStop: "Dallas Distribution Center, Texas, USA",
   // alertMessage: "Attention: Shipment processing has been temporarily delayed at the Dallas distribution facility. Tracking will update after the next scheduled transfer.",
