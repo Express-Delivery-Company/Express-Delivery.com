@@ -208,10 +208,10 @@ const shipments = {
   eta: "3 Days",
   weight: "5300 lb",
   service: "Domestic Express Freight",
-  currentStop: "Ontario Freight Distribution Center, California, USA",
+  currentStop: "Phoenix Logistics Hub, Arizona, USA",
 
   problemStop: "Phoenix Logistics Hub, Arizona, USA",
-  alertMessage: "Attention: Shipment is awaiting the next scheduled dispatch from the  center due to freight consolidation. Please check your email if further documentation is required.",
+  alertMessage: "Attention: Shipment is awaiting the next scheduled dispatch from the Phoenix Logistics Hub, Arizona center due to freight consolidation. Please check your email if further documentation is required.",
 
   route: routeBeverlyHillsRoyseCityExpress
 },
