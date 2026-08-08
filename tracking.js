@@ -191,10 +191,10 @@ const shipments = {
   eta: "3 Days",
   weight: "5300 lb",
   service: "Domestic Express Freight",
-  currentStop: "Dallas Freight Hub, Texas, USA",
+  currentStop: "Orlando Distribution Facility, Florida, USA",
 
-  problemStop: "Dallas Freight Hub, Texas, USA",
-   alertMessage: "Attention: Shipment processing has been temporarily delayed at the Dallas distribution facility. Tracking will update after the next scheduled transfer. Please check your email if further documentation is required.",
+  problemStop: "Orlando Distribution Facility, Florida, USA",
+   alertMessage: "Attention: Shipment processing has been temporarily delayed at the Orlando Distribution Facility . Tracking will update after the next scheduled transfer. Please check your email if further documentation is required.",
 
   route: routeBeverlyHillsFortPierceExpress
 },
@@ -208,10 +208,10 @@ const shipments = {
   eta: "3 Days",
   weight: "5300 lb",
   service: "Domestic Express Freight",
-  currentStop: "Phoenix Logistics Hub, Arizona, USA",
+  currentStop: "Dallas Freight Distribution Center, Texas, USA",
 
-  problemStop: "Phoenix Logistics Hub, Arizona, USA",
-  alertMessage: "Attention: Shipment is awaiting the next scheduled dispatch from the Phoenix Logistics Hub, Arizona center due to freight consolidation. Please check your email if further documentation is required.",
+  problemStop: "Dallas Freight Distribution Center, Texas, USA",
+  alertMessage: "Attention: Shipment is awaiting the next scheduled dispatch from the Dallas Freight Distribution Center, due to freight consolidation. Please check your email if further documentation is required.",
 
   route: routeBeverlyHillsRoyseCityExpress
 },
