@@ -133,7 +133,7 @@ const shipments = {
     eta: "14 Business Days",
     weight: "26 kg",
     service: "International Cargo",
-    currentStop: "Stockholm, Sweden",
+    currentStop: "Reykjavik, Iceland",
     // problemStop: "Halifax, Canada",
     // alertMessage: "Attention: Shipment held by customs authorities in Halifax, Canada. Please check your email for more information and instructions.",
     route: routeSwedenMissouri
