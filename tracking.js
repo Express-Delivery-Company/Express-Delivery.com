@@ -277,7 +277,7 @@ const shipments = {
     eta: "7 Days",
     weight: "5kg",
     service: "International Air Cargo",
-    currentStop: "Chicago O'Hare International Airport, Illinois, USA",
+    currentStop: "Madrid-Barajas International Airport, Spain",
     route: routeSpainMinnesota
 },
 
