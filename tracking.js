@@ -190,6 +190,21 @@ const shipments = {
     // alertMessage: "Attention: Shipment held by customs authorities in Halifax, Canada. Please check your email for more information and instructions.",
     route: routeSwedenMissouri
   },
+  
+  "EXD-2048-9921": {
+    orderId: "EXD-2048-9921",
+    receiver: "Lajuan",
+    sender: "Andrew Beck",
+    status: "In Transit",
+    eta: "7 Days",
+    weight: "5kg",
+    service: "International Air Cargo",
+    currentStop: "Madrid-Barajas International Airport, Spain",
+    route: routeSpainMinnesota
+},
+  
+  
+  
   "EXD-4587-1204": {
     orderId: "EXD-4587-1204",
     receiver: "Martin Gauthier",
