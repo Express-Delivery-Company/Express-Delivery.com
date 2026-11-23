@@ -124,55 +124,55 @@ const routeBeverlyHillsRoyseCityExpress = [
 ];
 
 
-const routeNorthCarolinaMinnesota = [
+const routeSpainMinnesota = [
   {
-    place: "Raleigh, North Carolina, USA",
+    place: "Madrid-Barajas International Airport, Spain",
     time: "Day 1 - 08:45",
-    lat: 35.7796,
-    lng: -78.6382,
-    note: "Cargo received, weighed, documented, and registered at the origin logistics facility"
+    lat: 40.4983,
+    lng: -3.5676,
+    note: "Shipment received at the international air cargo facility, weighed, documented, and registered for export"
   },
   {
-    place: "Charlotte, North Carolina, USA",
-    time: "Day 2 - 11:20",
-    lat: 35.2271,
-    lng: -80.8431,
-    note: "Shipment transferred to the regional air cargo terminal and prepared for outbound transportation"
+    place: "Barcelona-El Prat Airport, Spain",
+    time: "Day 2 - 12:30",
+    lat: 41.2974,
+    lng: 2.0833,
+    note: "Cargo transferred through the Spanish air freight network for consolidation and international flight allocation"
   },
   {
-    place: "Atlanta, Georgia, USA",
-    time: "Day 3 - 14:35",
-    lat: 33.7490,
-    lng: -84.3880,
-    note: "Cargo arrived at the southeastern distribution hub for sorting, security screening, and flight allocation"
+    place: "Paris Charles de Gaulle Airport, France",
+    time: "Day 3 - 09:40",
+    lat: 49.0097,
+    lng: 2.5479,
+    note: "Shipment arrived at the European air cargo hub for transit screening, sorting, and transatlantic dispatch preparation"
   },
   {
-    place: "Memphis, Tennessee, USA",
-    time: "Day 4 - 09:15",
-    lat: 35.1495,
-    lng: -90.0490,
-    note: "Shipment processed through the central air cargo hub and assigned to its next connecting flight"
+    place: "Chicago O'Hare International Airport, Illinois, USA",
+    time: "Day 4 - 15:20",
+    lat: 41.9742,
+    lng: -87.9073,
+    note: "Shipment arrived in the United States and underwent import processing, cargo inspection, and regional sorting"
   },
   {
-    place: "Chicago, Illinois, USA",
-    time: "Day 5 - 16:40",
-    lat: 41.8781,
-    lng: -87.6298,
-    note: "Cargo arrived at the Midwest regional gateway for transit processing and onward dispatch"
+    place: "Indianapolis International Airport, Indiana, USA",
+    time: "Day 5 - 11:45",
+    lat: 39.7173,
+    lng: -86.2944,
+    note: "Cargo transferred through the Midwest air freight network and processed for its next connecting flight"
   },
   {
-    place: "Des Moines, Iowa, USA",
-    time: "Day 6 - 12:25",
-    lat: 41.5868,
-    lng: -93.6250,
-    note: "Shipment transferred through the regional logistics network and prepared for final destination processing"
+    place: "Des Moines International Airport, Iowa, USA",
+    time: "Day 6 - 14:10",
+    lat: 41.5340,
+    lng: -93.6631,
+    note: "Shipment arrived at a regional air cargo facility and completed final transit sorting and destination dispatch preparation"
   },
   {
-    place: "Minneapolis, Minnesota, USA",
-    time: "Day 7 - 08:50",
-    lat: 44.9778,
-    lng: -93.2650,
-    note: "Shipment arrived at the destination cargo facility and was received for final delivery processing"
+    place: "Minneapolis-Saint Paul International Airport, Minnesota, USA",
+    time: "Day 7 - 09:30",
+    lat: 44.8848,
+    lng: -93.2223,
+    note: "Shipment successfully arrived at the destination air cargo facility and was received for final delivery processing"
   }
 ];
 
@@ -268,17 +268,21 @@ const shipments = {
   route: routeBeverlyHillsRoyseCityExpress
 },
 
+
 "EXD-8754-2219": {
-    orderId: "EXD-7812-3345",
-    receiver: "Nahum Ross",
-    sender: "Davinci",
+    orderId: "EXD-8754-2219",
+    receiver: "Lajuan",
+    sender: "Andrew Beck",
     status: "In Transit",
     eta: "7 Days",
-    weight: "2 kg",
-    service: "Domestic Air Cargo",
-    currentStop: "Chicago, Illinois, USA",
-    route: routeNorthCarolinaMinnesota
+    weight: "5kg",
+    service: "International Air Cargo",
+    currentStop: "Chicago O'Hare International Airport, Illinois, USA",
+    route: routeSpainMinnesota
 },
+
+
+
   
 };
 
