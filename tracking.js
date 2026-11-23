@@ -124,6 +124,58 @@ const routeBeverlyHillsRoyseCityExpress = [
 ];
 
 
+const routeNorthCarolinaMinnesota = [
+  {
+    place: "Raleigh, North Carolina, USA",
+    time: "Day 1 - 08:45",
+    lat: 35.7796,
+    lng: -78.6382,
+    note: "Cargo received, weighed, documented, and registered at the origin logistics facility"
+  },
+  {
+    place: "Charlotte, North Carolina, USA",
+    time: "Day 2 - 11:20",
+    lat: 35.2271,
+    lng: -80.8431,
+    note: "Shipment transferred to the regional air cargo terminal and prepared for outbound transportation"
+  },
+  {
+    place: "Atlanta, Georgia, USA",
+    time: "Day 3 - 14:35",
+    lat: 33.7490,
+    lng: -84.3880,
+    note: "Cargo arrived at the southeastern distribution hub for sorting, security screening, and flight allocation"
+  },
+  {
+    place: "Memphis, Tennessee, USA",
+    time: "Day 4 - 09:15",
+    lat: 35.1495,
+    lng: -90.0490,
+    note: "Shipment processed through the central air cargo hub and assigned to its next connecting flight"
+  },
+  {
+    place: "Chicago, Illinois, USA",
+    time: "Day 5 - 16:40",
+    lat: 41.8781,
+    lng: -87.6298,
+    note: "Cargo arrived at the Midwest regional gateway for transit processing and onward dispatch"
+  },
+  {
+    place: "Des Moines, Iowa, USA",
+    time: "Day 6 - 12:25",
+    lat: 41.5868,
+    lng: -93.6250,
+    note: "Shipment transferred through the regional logistics network and prepared for final destination processing"
+  },
+  {
+    place: "Minneapolis, Minnesota, USA",
+    time: "Day 7 - 08:50",
+    lat: 44.9778,
+    lng: -93.2650,
+    note: "Shipment arrived at the destination cargo facility and was received for final delivery processing"
+  }
+];
+
 const shipments = {
   "EXD-2048-9921": {
     orderId: "EXD-2048-9921",
@@ -216,18 +268,18 @@ const shipments = {
   route: routeBeverlyHillsRoyseCityExpress
 },
 
+"EXD-8754-2219": {
+    orderId: "EXD-7812-3345",
+    receiver: "Nahum Ross",
+    sender: "Davinci",
+    status: "In Transit",
+    eta: "7 Days",
+    weight: "2 kg",
+    service: "Domestic Air Cargo",
+    currentStop: "Chicago, Illinois, USA",
+    route: routeNorthCarolinaMinnesota
+},
   
-  "EXD-8754-2219": {
-    orderId: "EXD-8754-2219",
-    receiver: "Ethan Hall",
-    sender: "Victoria Lee",
-    status: "Delivered",
-    eta: "Completed",
-    weight: "2.2 kg",
-    service: "Express Air",
-    currentStop: "Scottsdale, Arizona, USA",
-    route: routeUsDomestic
-}
 };
 
 const summaryKv = document.getElementById("summaryKv");
