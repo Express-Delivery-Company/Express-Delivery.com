@@ -199,7 +199,9 @@ const shipments = {
     eta: "7 Days",
     weight: "5kg",
     service: "International Air Cargo",
-    currentStop: "Madrid-Barajas International Airport, Spain",
+    currentStop: "Paris Charles de Gaulle Airport, France",
+    problemStop: "Paris Charles de Gaulle Airport, France",
+    alertMessage: "Attention: Shipment held by customs authorities in Paris Charles de Gaulle Airport, France. Please check your email for more information and instructions.",
     route: routeSpainMinnesota
 },
   
