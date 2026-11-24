@@ -1,7 +1,7 @@
 const pageName = window.location.pathname.split("/").pop() || "tracking.html";
 const params = new URLSearchParams(window.location.search);
 const legacyPageCodes = {
-  "tracking.html": "EXP-2048-9921",
+  "tracking.html": "EXD-2048-9921",
   "tracking2.html": "EXD-4587-1204",
   "tracking3.html": "EXD-7812-3345",
   "tracking4.html": "EXD-9901-7742",
@@ -191,8 +191,8 @@ const shipments = {
     route: routeSwedenMissouri
   },
   
-  "EXP-2048-9921": {
-    orderId: "EXP-2048-9921",
+  "EXD-2048-9921": {
+    orderId: "EXD-2048-9921",
     receiver: "Lajuan",
     sender: "Andrew Beck",
     status: "In Transit",
