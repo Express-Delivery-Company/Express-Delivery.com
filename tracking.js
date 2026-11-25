@@ -286,19 +286,6 @@ const shipments = {
 },
 
 
-"EXD-8754-2219": {
-    orderId: "EXD-8754-2219",
-    receiver: "Lajuan",
-    sender: "Andrew Beck",
-    status: "In Transit",
-    eta: "7 Days",
-    weight: "5kg",
-    service: "International Air Cargo",
-    currentStop: "Madrid-Barajas International Airport, Spain",
-    route: routeSpainMinnesota
-},
-
-
 
   
 };
