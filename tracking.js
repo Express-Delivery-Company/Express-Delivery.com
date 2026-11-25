@@ -7,7 +7,7 @@ const legacyPageCodes = {
   "tracking4.html": "EXD-9901-7742",
   "tracking5.html": "EXD-6633-1188",
   "tracking6.html": "EXD-4402-5567",
-  "tracking7.html": "EXD-8754-2219"
+  "tracking7.html": "EXD-8754-2218"
 };
 const requestedCode = (params.get("code") || legacyPageCodes[pageName] || "EXD-2048-9921").trim().toUpperCase();
 
